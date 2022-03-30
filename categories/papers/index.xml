@@ -1,0 +1,71 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>论文笔记 - 分类 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/categories/papers/</link>
+        <description>论文笔记 - 分类 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 25 Jan 2022 21:48:47 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/categories/papers/" rel="self" type="application/rss+xml" /><item>
+    <title>Online Pricing and Trading of Private Data in Correlated Queries</title>
+    <link>https://barneys.gitee.io/paper07/</link>
+    <pubDate>Tue, 25 Jan 2022 21:48:47 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper07/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>第七篇文献笔记</p>]]></description>
+</item><item>
+    <title>Trading Private Range Counting over Big IoT Data</title>
+    <link>https://barneys.gitee.io/paper06/</link>
+    <pubDate>Tue, 23 Nov 2021 19:09:22 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper06/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>第六篇文献笔记</p>]]></description>
+</item><item>
+    <title>Adoption and Effects of Software Engineering Best Practices in Machine Learning</title>
+    <link>https://barneys.gitee.io/paper05/</link>
+    <pubDate>Fri, 19 Nov 2021 23:37:27 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper05/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>第五篇文献笔记</p>]]></description>
+</item><item>
+    <title>Dealer: An End-to-End Model Marketplace with Differential Privacy</title>
+    <link>https://barneys.gitee.io/paper04/</link>
+    <pubDate>Tue, 02 Nov 2021 12:56:50 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper04/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>第四篇文献笔记</p>]]></description>
+</item><item>
+    <title>Selling privacy at auction</title>
+    <link>https://barneys.gitee.io/paper03/</link>
+    <pubDate>Tue, 19 Oct 2021 13:22:29 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper03/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>第三篇文献笔记</p>]]></description>
+</item><item>
+    <title>ERATO: Trading Noisy Aggregate Statistics over Private Correlated Data</title>
+    <link>https://barneys.gitee.io/paper02/</link>
+    <pubDate>Mon, 27 Sep 2021 18:37:35 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper02/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>第二篇文献笔记</p>]]></description>
+</item><item>
+    <title>Privacy-Preserved Data Sharing Towards Multiple Parties in Industrial IoTs</title>
+    <link>https://barneys.gitee.io/paper01/</link>
+    <pubDate>Thu, 01 Jul 2021 20:16:22 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper01/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>第一篇文献笔记</p>]]></description>
+</item></channel>
+</rss>

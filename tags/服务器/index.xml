@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>服务器 - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <description>服务器 - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 14 Mar 2022 14:58:53 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>修改了ssh默认端口如何配置git</title>
+    <link>https://barneys.gitee.io/%E4%BF%AE%E6%94%B9%E4%BA%86ssh%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/</link>
+    <pubDate>Mon, 14 Mar 2022 14:58:53 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E4%BF%AE%E6%94%B9%E4%BA%86ssh%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/</guid>
+    <description><![CDATA[由于安全或者其它原因，我们可能会修改默认的SSH服务端口号，默认情况下，已有的git项目在pull或者push的时候会报错。 现在假设原来的项]]></description>
+</item></channel>
+</rss>

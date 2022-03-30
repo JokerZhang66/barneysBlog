@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title"> - Barney&#39;s Blog</title><meta name="Description" content="Welcome to Barney&#39;s Blog"><meta property="og:title" content="" />
+<meta property="og:description" content="差分隐私什么是差分隐私 差分隐私(DP,Differential Privacy)最早由微软科学家Cynthia Dwork提出。差分隐私通过添加随机噪声对原始数据进行扰动，在扰动过程中保证数据的统计不变性。差分隐私作为一种严谨而有效的隐私保护机制，使攻击者即使攻击者拥有最大背景知识也无法识别单条记录是否在原数据表中。差分隐私研究的核心问题是如何高效地兼顾安全性(Privacy-Preserve)和结果可用性(utility)。
+ 本地差分隐私 本地差分隐私(LDP,Local Differential Privacy)是一种新兴的差分隐私保护模型，它将数据扰动过程从服务器端转移到用户端。用户将扰动过后的数据发送至数据收集者(Aggregator)，之后数据收集者进行聚合查询。LDP 不仅保护了用户的隐私，也避免了数据收集者意外泄露用户真实数据的情况，即 LDP同时保护了数据收集者.LDP被互联网公司广泛采用，比如谷歌的chrome浏览器，苹果的safari浏览器，微软的windows操作系统和小米的MIUI等。
+ CDP vs LDP   差分隐私 CDP LDP     是否必须有可信第三方 是 否   查询的数据 相邻数据集 其中两条记录    传统的差分隐私技术将原始数据集中到一个数据中心, 然后发布满足差分隐私的相关统计信息, 我们称其为中心化差分隐私(CDP,Centralized Differential Privacy)技术.因此, 中心化差分隐私对于敏感信息的保护始终基于一个前提假设:可信的第三方数据收集者, 即保证第三方数据收集者不会窃取或泄露用户的敏感信息.而在 LDP 中，数据管理员是不可信的，数据收集过程是关注的重点。
+组合特性差分隐私技术具有序列组合性和并行组合性两种特性，LDP和CDP都具有这两种特性。
+综述[1] 本地化差分隐私综述-叶青青等 [LDP] [pdf]
+[2] 差分隐私保护及其应用
+博客[1] FengHZ&rsquo;s Blog
+参考资料[1] 差分隐私之Composition Theorem（一）
+[2] 差分隐私概念介绍
+[3] 差分隐私：原理、应用与展望 [video]
+[4] 20200817差分隐私叶青青孙林 [video]
+[5] 20200817差分隐私张啸剑 [video]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://barneys.gitee.io/dp/" /><meta property="og:image" content="https://barneys.gitee.io/logo.png"/><meta property="article:section" content="" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://barneys.gitee.io/logo.png"/>
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="差分隐私什么是差分隐私 差分隐私(DP,Differential Privacy)最早由微软科学家Cynthia Dwork提出。差分隐私通过添加随机噪声对原始数据进行扰动，在扰动过程中保证数据的统计不变性。差分隐私作为一种严谨而有效的隐私保护机制，使攻击者即使攻击者拥有最大背景知识也无法识别单条记录是否在原数据表中。差分隐私研究的核心问题是如何高效地兼顾安全性(Privacy-Preserve)和结果可用性(utility)。
+ 本地差分隐私 本地差分隐私(LDP,Local Differential Privacy)是一种新兴的差分隐私保护模型，它将数据扰动过程从服务器端转移到用户端。用户将扰动过后的数据发送至数据收集者(Aggregator)，之后数据收集者进行聚合查询。LDP 不仅保护了用户的隐私，也避免了数据收集者意外泄露用户真实数据的情况，即 LDP同时保护了数据收集者.LDP被互联网公司广泛采用，比如谷歌的chrome浏览器，苹果的safari浏览器，微软的windows操作系统和小米的MIUI等。
+ CDP vs LDP   差分隐私 CDP LDP     是否必须有可信第三方 是 否   查询的数据 相邻数据集 其中两条记录    传统的差分隐私技术将原始数据集中到一个数据中心, 然后发布满足差分隐私的相关统计信息, 我们称其为中心化差分隐私(CDP,Centralized Differential Privacy)技术.因此, 中心化差分隐私对于敏感信息的保护始终基于一个前提假设:可信的第三方数据收集者, 即保证第三方数据收集者不会窃取或泄露用户的敏感信息.而在 LDP 中，数据管理员是不可信的，数据收集过程是关注的重点。
+组合特性差分隐私技术具有序列组合性和并行组合性两种特性，LDP和CDP都具有这两种特性。
+综述[1] 本地化差分隐私综述-叶青青等 [LDP] [pdf]
+[2] 差分隐私保护及其应用
+博客[1] FengHZ&rsquo;s Blog
+参考资料[1] 差分隐私之Composition Theorem（一）
+[2] 差分隐私概念介绍
+[3] 差分隐私：原理、应用与展望 [video]
+[4] 20200817差分隐私叶青青孙林 [video]
+[5] 20200817差分隐私张啸剑 [video]"/>
+<meta name="application-name" content="bnblogs">
+<meta name="apple-mobile-web-app-title" content="bnblogs">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://barneys.gitee.io/dp/" /><link rel="prev" href="https://barneys.gitee.io/friends/" /><link rel="next" href="https://barneys.gitee.io/about/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.a12cacf4b5b41234196cb89042b24a70.css" integrity="md5-oSys9LW0EjQZbLiQQrJKcA=="><link rel="stylesheet" href="/css/style.min.9585552b5660b28b64d180ea7a7e1f66.css" integrity="md5-lYVVK1Zgsotk0YDqen4fZg=="><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.c4b9a109042331f12794212bac10225a.css" integrity="md5-xLmhCQQjMfEnlCErrBAiWg==">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.c4b9a109042331f12794212bac10225a.css" integrity="md5-xLmhCQQjMfEnlCErrBAiWg=="></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.b3d5b75898f1ed885c7d2b538faa8b81.css" integrity="md5-s9W3WJjx7YhcfStTj6qLgQ==">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.b3d5b75898f1ed885c7d2b538faa8b81.css" integrity="md5-s9W3WJjx7YhcfStTj6qLgQ=="></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/barneys.gitee.io\/dp\/"
+        },"image": ["https:\/\/barneys.gitee.io\/images\/Apple-Devices-Preview.png"],"genre": "page","wordcount":  56 ,
+        "url": "https:\/\/barneys.gitee.io\/dp\/","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/barneys.gitee.io\/images\/avatar.webp",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "Barney"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
+        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
+        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
+        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
+        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+        <div class="header-title">
+            <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png 1.5x, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"
+        title="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner">
+                
+                <div class="dropdown">
+                    <a href="/posts/" 
+                        class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-tags'></i> 标签 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-book-reader"></i> 科研生活 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/dp/" title="" ><i class="fas fa-sticky-note"></i> 差分隐私 </a><a href="/categories/papers/" title="" ><i class="fas fa-book"></i> 论文笔记 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a><a href="/friends/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-user-friends"></i> 友链 </a><a href="/memo/" title="" ><i class="fas fa-clipboard"></i> 备忘录 </a><a href="/message/" title="" ><i class="fas fa-comment"></i> 留言板 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" target="_blank" rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-blog"></i> bnblogs </a><a href="/" title="" target="_blank"
+                            rel="noopener" ><i class="fab fa-goodreads"></i> gitee镜像站 </a><a href="https://joker-zhang66-github-io.vercel.app/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-caret-square-up"></i> vercel镜像站 </a></div>
+                </div>
+                <a class="menu-item"
+                    href="https://my-docsify.vercel.app/#/README"  title="docsify" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-folder'></i> docsify 
+                </a><a class="menu-item"
+                    href="https://travellings.link/" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+                </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-desktop">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </span><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+            <div class="header-title">
+                <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png 1.5x, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"
+        title="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-mobile">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </div>
+                <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </a>
+            </div>
+            <div class="dropdown">
+                <a href="/posts/" 
+                    class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-tags'></i> 标签 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-book-reader"></i> 科研生活 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/dp/" title="" ><i class="fas fa-sticky-note"></i> 差分隐私 </a><a href="/categories/papers/" title="" ><i class="fas fa-book"></i> 论文笔记 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a><a href="/friends/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-user-friends"></i> 友链 </a><a href="/memo/" title="" ><i class="fas fa-clipboard"></i> 备忘录 </a><a href="/message/" title="" ><i class="fas fa-comment"></i> 留言板 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" target="_blank"
+                    rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-blog"></i> bnblogs </a><a href="/" title="" target="_blank" rel="noopener"
+                        ><i class="fab fa-goodreads"></i> gitee镜像站 </a><a href="https://joker-zhang66-github-io.vercel.app/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-caret-square-up"></i> vercel镜像站 </a></div>
+            </div>
+            <a class="menu-item"
+                href="https://my-docsify.vercel.app/#/README"  title="docsify" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-folder'></i> docsify 
+            </a><a class="menu-item"
+                href="https://travellings.link/" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+            </a><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster"></h1><div class="content" id="content"><h2 id="差分隐私" class="headerLink">
+    <a href="#%e5%b7%ae%e5%88%86%e9%9a%90%e7%a7%81" class="header-mark"></a>差分隐私</h2><center><a class="lightgallery" href="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/definition.png" title="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/definition.png" data-thumbnail="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/definition.png">
+        <img
+            class="lazyload"
+            data-src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/definition.png"
+            data-srcset="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/definition.png, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/definition.png 1.5x, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/definition.png 2x"
+            data-sizes="auto"
+            alt="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/definition.png">
+    </a></center>
+<h3 id="什么是差分隐私" class="headerLink">
+    <a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%b7%ae%e5%88%86%e9%9a%90%e7%a7%81" class="header-mark"></a>什么是差分隐私</h3><blockquote>
+<p>差分隐私(<strong>DP,Differential Privacy</strong>)最早由微软科学家<a href="https://en.wikipedia.org/wiki/Cynthia_Dwork" target="_blank" rel="noopener noreffer">Cynthia Dwork</a>提出。差分隐私通过添加随机噪声对原始数据进行扰动，在扰动过程中保证数据的统计不变性。差分隐私作为一种严谨而有效的隐私保护机制，使攻击者即使攻击者拥有最大背景知识也无法识别单条记录是否在原数据表中。差分隐私研究的核心问题是如何高效地兼顾安全性(<strong>Privacy-Preserve</strong>)和结果可用性(<strong>utility</strong>)。</p>
+</blockquote>
+<h3 id="本地差分隐私" class="headerLink">
+    <a href="#%e6%9c%ac%e5%9c%b0%e5%b7%ae%e5%88%86%e9%9a%90%e7%a7%81" class="header-mark"></a>本地差分隐私</h3><blockquote>
+<p>本地差分隐私(<strong>LDP,Local Differential Privacy</strong>)是一种新兴的差分隐私保护模型，它将数据扰动过程从服务器端转移到用户端。用户将扰动过后的数据发送至数据收集者(<strong>Aggregator</strong>)，之后数据收集者进行聚合查询。LDP 不仅保护了用户的隐私，也避免了数据收集者意外泄露用户真实数据的情况，即 LDP同时保护了数据收集者.LDP被互联网公司广泛采用，比如谷歌的<code>chrome</code>浏览器，苹果的<code>safari</code>浏览器，微软的<code>windows</code>操作系统和小米的<code>MIUI</code>等。</p>
+</blockquote>
+<h3 id="cdp-vs-ldp" class="headerLink">
+    <a href="#cdp-vs-ldp" class="header-mark"></a>CDP vs LDP</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">差分隐私</th>
+<th style="text-align:center">CDP</th>
+<th style="text-align:center">LDP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">是否必须有可信第三方</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:left">查询的数据</td>
+<td style="text-align:center">相邻数据集</td>
+<td style="text-align:center">其中两条记录</td>
+</tr>
+</tbody>
+</table>
+<p>传统的差分隐私技术将原始数据集中到一个数据中心, 然后发布满足差分隐私的相关统计信息, 我们称其为中心化差分隐私(<strong>CDP,Centralized Differential Privacy</strong>)技术.因此, 中心化差分隐私对于敏感信息的保护始终基于一个前提假设:可信的第三方数据收集者, 即保证第三方数据收集者不会窃取或泄露用户的敏感信息.而在 LDP 中，数据管理员是不可信的，数据收集过程是关注的重点。</p>
+<h3 id="组合特性" class="headerLink">
+    <a href="#%e7%bb%84%e5%90%88%e7%89%b9%e6%80%a7" class="header-mark"></a>组合特性</h3><p>差分隐私技术具有序列组合性和并行组合性两种特性，LDP和CDP都具有这两种特性。</p>
+<p><img
+        class="lazyload"
+        data-src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220302003000.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220302003000.png, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220302003000.png 1.5x, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220302003000.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220302003000.png"
+        title="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220302003000.png"></p>
+<h3 id="综述" class="headerLink">
+    <a href="#%e7%bb%bc%e8%bf%b0" class="header-mark"></a>综述</h3><p>[1] <a href="http://jos.org.cn/html/2018/7/5364.htm#close" target="_blank" rel="noopener noreffer">本地化差分隐私综述-叶青青等</a> [LDP]
+<a href="https://scholar.google.com/scholar?q=%E6%9C%AC%E5%9C%B0%E5%8C%96%E5%B7%AE%E5%88%86%E9%9A%90%E7%A7%81%E7%A0%94%E7%A9%B6%E7%BB%BC%E8%BF%B0&amp;hl=zh-CN&amp;as_sdt=0&amp;as_vis=1&amp;oi=scholart" target="_blank" rel="noopener noreffer">[pdf]</a></p>
+<p>[2] <a href="http://cjc.ict.ac.cn/online/onlinepaper/xp-2014115101759.pdf" target="_blank" rel="noopener noreffer">差分隐私保护及其应用</a></p>
+<h3 id="博客" class="headerLink">
+    <a href="#%e5%8d%9a%e5%ae%a2" class="header-mark"></a>博客</h3><p>[1] <a href="https://www.fenghz.xyz/" target="_blank" rel="noopener noreffer">FengHZ&rsquo;s Blog</a></p>
+<h3 id="参考资料" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" class="header-mark"></a>参考资料</h3><p>[1] <a href="https://zhuanlan.zhihu.com/p/264779199" target="_blank" rel="noopener noreffer">差分隐私之Composition Theorem（一）</a></p>
+<p>[2] <a href="https://zhuanlan.zhihu.com/p/61179516" target="_blank" rel="noopener noreffer">差分隐私概念介绍</a></p>
+<p>[3] <a href="https://www.bilibili.com/video/BV1Tk4y117uA" target="_blank" rel="noopener noreffer">差分隐私：原理、应用与展望</a> [video]</p>
+<p>[4] <a href="https://www.bilibili.com/video/BV12K4y1Y7ux" target="_blank" rel="noopener noreffer">20200817差分隐私叶青青孙林</a> [video]</p>
+<p>[5] <a href="https://www.bilibili.com/video/BV1Qk4y117S1" target="_blank" rel="noopener noreffer">20200817差分隐私张啸剑</a> [video]</p>
+</div><div id="comments"><div id="waline" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+            </noscript></div></div></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 gitee 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://hugo.bnblogs.cc/" target="_blank" rel="noopener noreferrer">Barney</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a>
+
+        <a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.4c5305a5255032858d47ae995b20aeca.css" integrity="md5-TFMFpSVQMoWNR66ZWyCuyg=="><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.48c9993700b46eacbb64b90dd4693703.js" integrity="md5-SMmZNwC0bqy7ZLkN1Gk3Aw=="></script><script type="text/javascript" src="/lib/lunr/lunr.min.a5d5513b86327998d25c64e1144a1b91.js" integrity="md5-pdVRO4YyeZjSXGThFEobkQ=="></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.99074db0b11436c1fb9b2cfbb9214743.js" integrity="md5-mQdNsLEUNsH7myz7uSFHQw=="></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.f29617b7a917cbd474e1982954339811.js" integrity="md5-8pYXt6kXy9R04ZgpVDOYEQ=="></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.b82368b55ab941d0bb7db421e1084d6c.js" integrity="md5-uCNotVq5QdC7fbQh4QhNbA=="></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.780b6c687c0fa94aafcd976fedb0c871.js" integrity="md5-eAtsaHwPqUqvzZdv7bDIcQ=="></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.4a48532bf0b17c058b8b6854f49de23f.js" integrity="md5-SkhTK/CxfAWLi2hU9J3iPw==" defer></script><script type="text/javascript" src="/lib/topbar/topbar.min.d1b243f03e8431338028ab6bccbe9243.js" integrity="md5-0bJD8D6EMTOAKKtrzL6SQw=="></script><script type="text/javascript" src="/lib/pjax/pjax.min.36c19fbf6fa57ad29c7a0a11e5696883.js" integrity="md5-NsGfv2&#43;letKcegoR5Wlogw=="></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script type="text/javascript" src="/js/custom.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"waline":{"copyright":true,"dark":"body[theme='dark'], body[theme='black']","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji"],"highlight":true,"lang":"zh-cn","login":"enable","meta":["nick","mail","link"],"pageSize":100,"requiredMeta":["nick","mail"],"serverURL":"https://my-waline-one.vercel.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"desktop-header-typeit":"Barney's Blog","mobile-header-typeit":"Barney's Blog"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":0,"speed":100}};</script><script type="text/javascript" src="/lib/waline/Waline.min.74cf6bc1a135ed34617bb482fb215fc5.js" integrity="md5-dM9rwaE17TRhe7SC&#43;yFfxQ==" defer></script><script type="text/javascript" src="/js/waline.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.70122806a31939745c1f3fd5d2e845f2.js" integrity="md5-cBIoBqMZOXRcHz/V0uhF8g=="></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.2493a49c3eb456e424fc22ba22d027a8.js" integrity="md5-JJOknD60VuQk/CK6ItAnqA=="></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.99c66a33f2a42b61f289e7c9b884a899.js" integrity="md5-mcZqM/KkK2HyiefJuISomQ=="></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.46a19c0236eccc86e5cd3b2521f8c69a.js" integrity="md5-RqGcAjbszIblzTslIfjGmg=="></script><script type="text/javascript" src="/lib/sharer/sharer.min.b834cfb885a9d1d9cc75ca8215372179.js" integrity="md5-uDTPuIWp0dnMdcqCFTcheQ=="></script><script type="text/javascript" src="/lib/typeit/typeit.min.9d25659879cc88596096d4ad38a5a303.js" integrity="md5-nSVlmHnMiFlgltStOKWjAw=="></script><script type="text/javascript" src="/lib/katex/katex.min.bfca83b6fc4c575b0498dd592bc6f83f.js" integrity="md5-v8qDtvxMV1sEmN1ZK8b4Pw==" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.8634ca81ec07bf42c8a5a6d433a04cd7.js" integrity="md5-hjTKgewHv0LIpabUM6BM1w==" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.1d34f04be48d9e25b6284ea3189a9850.js" integrity="md5-HTTwS&#43;SNniW2KE6jGJqYUA==" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.9b29ccab32b45fb570484fdf14724255.js" integrity="md5-mynMqzK0X7VwSE/fFHJCVQ==" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.a16e59257986febeb0baaee33f5b0a78.css" integrity="md5-oW5ZJXmG/r6wuq7jP1sKeA=="><link rel="stylesheet" href="/lib/katex/katex.min.77c065b9647e4c1b9748679c7d2029e3.css" integrity="md5-d8BluWR&#43;TBuXSGecfSAp4w=="><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.727189e34fc67f1c2e7020d67aada5dc.css" integrity="md5-cnGJ40/GfxwucCDWeq2l3A==">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.727189e34fc67f1c2e7020d67aada5dc.css" integrity="md5-cnGJ40/GfxwucCDWeq2l3A=="></noscript></div></body>
+
+</html>

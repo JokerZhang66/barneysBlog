@@ -1,0 +1,58 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>环境配置 - 分类 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+        <description>环境配置 - 分类 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 15 Feb 2022 20:27:23 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux下安装zsh</title>
+    <link>https://barneys.gitee.io/linux%E4%B8%8B%E5%AE%89%E8%A3%85zsh/</link>
+    <pubDate>Tue, 15 Feb 2022 20:27:23 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/linux%E4%B8%8B%E5%AE%89%E8%A3%85zsh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1200x630wa.png" referrerpolicy="no-referrer">
+            </div><p>以官方文档为准</p>]]></description>
+</item><item>
+    <title>配置gitee和git并存环境</title>
+    <link>https://barneys.gitee.io/gitee%E5%92%8Cgit%E5%B9%B6%E5%AD%98/</link>
+    <pubDate>Fri, 03 Dec 2021 22:11:44 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/gitee%E5%92%8Cgit%E5%B9%B6%E5%AD%98/</guid>
+    <description><![CDATA[全局配置文件路径 1 ~/.gitconfig 使用命令查看自己的全局配置 1 git config --global --list 1. 清除git全局配置如果在此之前使用过下列命令配置过全局用户名和邮箱： 1 2 git config --global user.name &#34;xxx&#34;]]></description>
+</item><item>
+    <title>深度学习GPU加速配置</title>
+    <link>https://barneys.gitee.io/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0gpu%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Fri, 03 Dec 2021 14:14:48 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0gpu%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[<p>windows10配置Miniconda+Cuda+Cudnn+TensorFlow+Pytorch+Pycharm环境</p>]]></description>
+</item><item>
+    <title>IDEA配置Git环境</title>
+    <link>https://barneys.gitee.io/idea%E9%85%8D%E7%BD%AEgit%E7%8E%AF%E5%A2%83/</link>
+    <pubDate>Thu, 07 Oct 2021 22:48:27 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/idea%E9%85%8D%E7%BD%AEgit%E7%8E%AF%E5%A2%83/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/IDEA&amp;Git.JPG" referrerpolicy="no-referrer">
+            </div><p>IDEA和Git交互</p>]]></description>
+</item><item>
+    <title>Picgo&#43;Github图床</title>
+    <link>https://barneys.gitee.io/github%E5%9B%BE%E5%BA%8A/</link>
+    <pubDate>Sun, 01 Aug 2021 11:22:58 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/github%E5%9B%BE%E5%BA%8A/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210801120530.png" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item><item>
+    <title>Sublime配置C/C&#43;&#43;环境</title>
+    <link>https://barneys.gitee.io/sublime%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link>
+    <pubDate>Tue, 06 Jul 2021 16:18:02 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/sublime%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jokerzhangimg.oss-cn-beijing.aliyuncs.com/image/20210706162247.png" referrerpolicy="no-referrer">
+            </div><p>在sublime编写c/c++程序</p>]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>docker - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/docker/</link>
+        <description>docker - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 17 Mar 2022 19:45:07 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <title>修复Uptime Kuma一个小错误</title>
+    <link>https://barneys.gitee.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</link>
+    <pubDate>Thu, 17 Mar 2022 19:45:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</guid>
+    <description><![CDATA[问题描述 解决方案 在location /中添加下列两行: 1 2 proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &#34;upgrade&#34;;]]></description>
+</item><item>
+    <title>Ubuntu上使用docker安装mysql</title>
+    <link>https://barneys.gitee.io/ubuntu%E4%B8%8A%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85mysql/</link>
+    <pubDate>Mon, 07 Mar 2022 18:01:43 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/ubuntu%E4%B8%8A%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85mysql/</guid>
+    <description><![CDATA[1.docker仓库搜索mysql1 docker search mysql 2.docker仓库拉取mysql8.0镜像1 docker pull mysql:8.0 docker pull mysql #拉取最新版本的mysql 3.查看本地镜]]></description>
+</item><item>
+    <title>Ubuntu上的docker操作</title>
+    <link>https://barneys.gitee.io/ubuntu%E4%B8%8A%E7%9A%84docker%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Mon, 13 Dec 2021 20:10:27 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/ubuntu%E4%B8%8A%E7%9A%84docker%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[<p>docker基本操作(待更新)</p>]]></description>
+</item></channel>
+</rss>

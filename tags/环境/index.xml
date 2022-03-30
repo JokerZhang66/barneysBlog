@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>环境 - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/%E7%8E%AF%E5%A2%83/</link>
+        <description>环境 - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 03 Dec 2021 14:14:48 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/%E7%8E%AF%E5%A2%83/" rel="self" type="application/rss+xml" /><item>
+    <title>深度学习GPU加速配置</title>
+    <link>https://barneys.gitee.io/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0gpu%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Fri, 03 Dec 2021 14:14:48 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0gpu%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[<p>windows10配置Miniconda+Cuda+Cudnn+TensorFlow+Pytorch+Pycharm环境</p>]]></description>
+</item><item>
+    <title>Sublime配置C/C&#43;&#43;环境</title>
+    <link>https://barneys.gitee.io/sublime%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</link>
+    <pubDate>Tue, 06 Jul 2021 16:18:02 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/sublime%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jokerzhangimg.oss-cn-beijing.aliyuncs.com/image/20210706162247.png" referrerpolicy="no-referrer">
+            </div><p>在sublime编写c/c++程序</p>]]></description>
+</item></channel>
+</rss>

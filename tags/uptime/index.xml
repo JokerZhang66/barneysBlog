@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Uptime - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/uptime/</link>
+        <description>Uptime - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 17 Mar 2022 19:45:07 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/uptime/" rel="self" type="application/rss+xml" /><item>
+    <title>修复Uptime Kuma一个小错误</title>
+    <link>https://barneys.gitee.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</link>
+    <pubDate>Thu, 17 Mar 2022 19:45:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</guid>
+    <description><![CDATA[问题描述 解决方案 在location /中添加下列两行: 1 2 proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &#34;upgrade&#34;;]]></description>
+</item></channel>
+</rss>

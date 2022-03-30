@@ -1,0 +1,49 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>github - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/github/</link>
+        <description>github - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 14 Jan 2022 12:52:17 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/github/" rel="self" type="application/rss+xml" /><item>
+    <title>Github下载加速</title>
+    <link>https://barneys.gitee.io/github%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F/</link>
+    <pubDate>Fri, 14 Jan 2022 12:52:17 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/github%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F/</guid>
+    <description><![CDATA[<p>加速下载github上的文件的方式有很多，后面再补充！</p>]]></description>
+</item><item>
+    <title>配置gitee和git并存环境</title>
+    <link>https://barneys.gitee.io/gitee%E5%92%8Cgit%E5%B9%B6%E5%AD%98/</link>
+    <pubDate>Fri, 03 Dec 2021 22:11:44 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/gitee%E5%92%8Cgit%E5%B9%B6%E5%AD%98/</guid>
+    <description><![CDATA[全局配置文件路径 1 ~/.gitconfig 使用命令查看自己的全局配置 1 git config --global --list 1. 清除git全局配置如果在此之前使用过下列命令配置过全局用户名和邮箱： 1 2 git config --global user.name &#34;xxx&#34;]]></description>
+</item><item>
+    <title>git基础</title>
+    <link>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</link>
+    <pubDate>Sun, 01 Aug 2021 12:46:34 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1_mtsk3fQ_BRemFidhkel3dA.png" referrerpolicy="no-referrer">
+            </div><p>git和github基本操作</p>]]></description>
+</item><item>
+    <title>Picgo&#43;Github图床</title>
+    <link>https://barneys.gitee.io/github%E5%9B%BE%E5%BA%8A/</link>
+    <pubDate>Sun, 01 Aug 2021 11:22:58 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/github%E5%9B%BE%E5%BA%8A/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210801120530.png" referrerpolicy="no-referrer">
+            </div>]]></description>
+</item><item>
+    <title>github提交出错error: failed to push some refs to ...</title>
+    <link>https://barneys.gitee.io/github%E6%8F%90%E4%BA%A4%E5%87%BA%E9%94%99/</link>
+    <pubDate>Sat, 31 Jul 2021 23:29:17 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/github%E6%8F%90%E4%BA%A4%E5%87%BA%E9%94%99/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1_pXPseZOkwPqHGKaBXGS3sQ.png" referrerpolicy="no-referrer">
+            </div><p>error: failed to push some refs to &lsquo;github.com:Barneys/Barneys.github.io.git&rsquo;</p>]]></description>
+</item></channel>
+</rss>

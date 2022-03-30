@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>mysql - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/mysql/</link>
+        <description>mysql - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 08 Mar 2022 17:25:49 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/mysql/" rel="self" type="application/rss+xml" /><item>
+    <title>Ubuntu20.04彻底卸载mysql8.0</title>
+    <link>https://barneys.gitee.io/ubuntu%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDmysql8/</link>
+    <pubDate>Tue, 08 Mar 2022 17:25:49 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/ubuntu%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDmysql8/</guid>
+    <description><![CDATA[1.查看mysql依赖 1 dpkg --list|grep mysql 2.卸载 mysql-common 1 sudo apt-get remove mysql-common 3.卸载mysql-server-8.0 1 sudo apt-get autoremove --purge mysql-server-8.0 4.清除残留数据 1 dpkg -l|grep ^rc|awk &#39;{print$2}&#39;|sudo xargs dpkg -P 5.再]]></description>
+</item><item>
+    <title>Ubuntu上使用docker安装mysql</title>
+    <link>https://barneys.gitee.io/ubuntu%E4%B8%8A%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85mysql/</link>
+    <pubDate>Mon, 07 Mar 2022 18:01:43 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/ubuntu%E4%B8%8A%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85mysql/</guid>
+    <description><![CDATA[1.docker仓库搜索mysql1 docker search mysql 2.docker仓库拉取mysql8.0镜像1 docker pull mysql:8.0 docker pull mysql #拉取最新版本的mysql 3.查看本地镜]]></description>
+</item></channel>
+</rss>

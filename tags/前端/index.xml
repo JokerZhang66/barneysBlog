@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>前端 - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/%E5%89%8D%E7%AB%AF/</link>
+        <description>前端 - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 13 Jul 2021 23:21:46 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/%E5%89%8D%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>前端基础知识</title>
+    <link>https://barneys.gitee.io/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+    <pubDate>Tue, 13 Jul 2021 23:21:46 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jokerzhangimg.oss-cn-beijing.aliyuncs.com/image/20210713232333.png" referrerpolicy="no-referrer">
+            </div><p>前端基础知识笔记</p>]]></description>
+</item></channel>
+</rss>

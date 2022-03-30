@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>代理 - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/%E4%BB%A3%E7%90%86/</link>
+        <description>代理 - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 14 Jan 2022 12:52:17 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/%E4%BB%A3%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>Github下载加速</title>
+    <link>https://barneys.gitee.io/github%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F/</link>
+    <pubDate>Fri, 14 Jan 2022 12:52:17 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/github%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F/</guid>
+    <description><![CDATA[<p>加速下载github上的文件的方式有很多，后面再补充！</p>]]></description>
+</item></channel>
+</rss>

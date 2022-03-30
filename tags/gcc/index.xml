@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>gcc - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/gcc/</link>
+        <description>gcc - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 16 Jan 2022 13:50:05 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/gcc/" rel="self" type="application/rss+xml" /><item>
+    <title>Nvim补全配置记录</title>
+    <link>https://barneys.gitee.io/nvim%E8%A1%A5%E5%85%A8%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</link>
+    <pubDate>Sun, 16 Jan 2022 13:50:05 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/nvim%E8%A1%A5%E5%85%A8%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</guid>
+    <description><![CDATA[安装及删除nvim1 2 sudo apt-get install neovim # 安装 sudo apt remove neovim # 删除 安装nodejs及npm1 2 sudo apt install nodejs npm nodejs --version # 查看版本 升级nodejs到最新版本(coc.n]]></description>
+</item></channel>
+</rss>

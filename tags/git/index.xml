@@ -1,0 +1,33 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>git - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/git/</link>
+        <description>git - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 14 Jan 2022 12:52:17 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/git/" rel="self" type="application/rss+xml" /><item>
+    <title>Github下载加速</title>
+    <link>https://barneys.gitee.io/github%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F/</link>
+    <pubDate>Fri, 14 Jan 2022 12:52:17 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/github%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F/</guid>
+    <description><![CDATA[<p>加速下载github上的文件的方式有很多，后面再补充！</p>]]></description>
+</item><item>
+    <title>IDEA配置Git环境</title>
+    <link>https://barneys.gitee.io/idea%E9%85%8D%E7%BD%AEgit%E7%8E%AF%E5%A2%83/</link>
+    <pubDate>Thu, 07 Oct 2021 22:48:27 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/idea%E9%85%8D%E7%BD%AEgit%E7%8E%AF%E5%A2%83/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/IDEA&amp;Git.JPG" referrerpolicy="no-referrer">
+            </div><p>IDEA和Git交互</p>]]></description>
+</item><item>
+    <title>git基础</title>
+    <link>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</link>
+    <pubDate>Sun, 01 Aug 2021 12:46:34 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1_mtsk3fQ_BRemFidhkel3dA.png" referrerpolicy="no-referrer">
+            </div><p>git和github基本操作</p>]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>git-bash - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/git-bash/</link>
+        <description>git-bash - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 14 Dec 2021 15:45:35 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/git-bash/" rel="self" type="application/rss+xml" /><item>
+    <title>Vscode &#43; window Terminal集成git-Bash终端</title>
+    <link>https://barneys.gitee.io/vscode%E9%9B%86%E6%88%90conda%E5%92%8Cgit-bash%E7%BB%88%E7%AB%AF/</link>
+    <pubDate>Tue, 14 Dec 2021 15:45:35 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vscode%E9%9B%86%E6%88%90conda%E5%92%8Cgit-bash%E7%BB%88%E7%AB%AF/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220210200308.png" referrerpolicy="no-referrer">
+            </div>1.Vscode集成git-Bash终端使用ctrl + shift + p打开设置,再点开右上角的settings.json,填入下列配置 1 2 3 4 5 &#34;terminal.integrated.profiles.windows&#34;: { &#34;Git-Bash&#34;:]]></description>
+</item></channel>
+</rss>

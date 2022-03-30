@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>腾讯云 - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</link>
+        <description>腾讯云 - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 16 Jan 2022 16:11:54 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" rel="self" type="application/rss+xml" /><item>
+    <title>服务器配置笔记</title>
+    <link>https://barneys.gitee.io/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Sun, 16 Jan 2022 16:11:54 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[<p>持续更新</p>]]></description>
+</item></channel>
+</rss>

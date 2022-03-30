@@ -1,0 +1,72 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>教程篇 - 分类 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/</link>
+        <description>教程篇 - 分类 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 17 Mar 2022 23:40:18 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/" rel="self" type="application/rss+xml" /><item>
+    <title>Nginx安装和卸载</title>
+    <link>https://barneys.gitee.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</link>
+    <pubDate>Thu, 17 Mar 2022 23:40:18 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</guid>
+    <description><![CDATA[安装Nginx1 2 sudo apt-get update sudo apt-get install nginx 卸载Nginx1 2 3 4 sudo apt-get remove nginx nginx-common # 卸载删除除了配置文件以外的所有文件。 sudo apt-get purge nginx nginx-common # 卸载所有东东，包括删除配置]]></description>
+</item><item>
+    <title>Vscode &#43; window Terminal集成git-Bash终端</title>
+    <link>https://barneys.gitee.io/vscode%E9%9B%86%E6%88%90conda%E5%92%8Cgit-bash%E7%BB%88%E7%AB%AF/</link>
+    <pubDate>Tue, 14 Dec 2021 15:45:35 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vscode%E9%9B%86%E6%88%90conda%E5%92%8Cgit-bash%E7%BB%88%E7%AB%AF/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220210200308.png" referrerpolicy="no-referrer">
+            </div>1.Vscode集成git-Bash终端使用ctrl + shift + p打开设置,再点开右上角的settings.json,填入下列配置 1 2 3 4 5 &#34;terminal.integrated.profiles.windows&#34;: { &#34;Git-Bash&#34;:]]></description>
+</item><item>
+    <title>Ubuntu上的docker操作</title>
+    <link>https://barneys.gitee.io/ubuntu%E4%B8%8A%E7%9A%84docker%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Mon, 13 Dec 2021 20:10:27 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/ubuntu%E4%B8%8A%E7%9A%84docker%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[<p>docker基本操作(待更新)</p>]]></description>
+</item><item>
+    <title>常用软件快捷键</title>
+    <link>https://barneys.gitee.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+    <pubDate>Tue, 30 Nov 2021 16:56:59 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+    <description><![CDATA[<p>待更新！</p>]]></description>
+</item><item>
+    <title>Linux常见命令</title>
+    <link>https://barneys.gitee.io/linux%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Sat, 27 Nov 2021 22:00:09 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/linux%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[<p>linux常见命令</p>]]></description>
+</item><item>
+    <title>git基础</title>
+    <link>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</link>
+    <pubDate>Sun, 01 Aug 2021 12:46:34 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1_mtsk3fQ_BRemFidhkel3dA.png" referrerpolicy="no-referrer">
+            </div><p>git和github基本操作</p>]]></description>
+</item><item>
+    <title>Centos安装nvim</title>
+    <link>https://barneys.gitee.io/centos%E5%AE%89%E8%A3%85nvim/</link>
+    <pubDate>Sun, 01 Aug 2021 10:25:34 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/centos%E5%AE%89%E8%A3%85nvim/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/Neovim-logo.svg.png" referrerpolicy="no-referrer">
+            </div><p>nvim使用教程</p>]]></description>
+</item><item>
+    <title>vim基础操作</title>
+    <link>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Sat, 31 Jul 2021 22:52:40 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master//img/1627743613797-vim-logo.png" referrerpolicy="no-referrer">
+            </div><p>vim基础操作</p>]]></description>
+</item></channel>
+</rss>

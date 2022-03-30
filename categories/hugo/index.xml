@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>hugo - 分类 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/categories/hugo/</link>
+        <description>hugo - 分类 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jul 2021 15:09:29 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/categories/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>博客功能展示</title>
+    <link>https://barneys.gitee.io/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/</link>
+    <pubDate>Wed, 30 Jun 2021 20:21:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211204152837.png" referrerpolicy="no-referrer">
+            </div><p>展示博客主题的相关功能</p>]]></description>
+</item><item>
+    <title>Hugo发布博客流程</title>
+    <link>https://barneys.gitee.io/hugo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</link>
+    <pubDate>Thu, 01 Jul 2021 15:09:29 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/hugo%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jokerzhangimg.oss-cn-beijing.aliyuncs.com/image/20210701150836.png" referrerpolicy="no-referrer">
+            </div><p>使用 hugo 编写文章必会指令</p>]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>latex - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/latex/</link>
+        <description>latex - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 03 Jul 2021 18:16:44 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/latex/" rel="self" type="application/rss+xml" /><item>
+    <title>Latex入门教程(2)</title>
+    <link>https://barneys.gitee.io/latex%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B02/</link>
+    <pubDate>Sat, 03 Jul 2021 18:16:44 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/latex%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B02/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jokerzhangimg.oss-cn-beijing.aliyuncs.com/image/20210702112010.png" referrerpolicy="no-referrer">
+            </div><p>Latex入门教程第二篇</p>]]></description>
+</item><item>
+    <title>Latex入门教程(1)</title>
+    <link>https://barneys.gitee.io/latex%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B1/</link>
+    <pubDate>Fri, 02 Jul 2021 15:24:21 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/latex%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B1/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jokerzhangimg.oss-cn-beijing.aliyuncs.com/image/20210702112010.png" referrerpolicy="no-referrer">
+            </div><p>Latex配置问题总结</p>]]></description>
+</item></channel>
+</rss>

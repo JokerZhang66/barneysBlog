@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">Hugo导航栏添加二级菜单 - Barney&#39;s Blog</title><meta name="Description" content="Welcome to Barney&#39;s Blog"><meta property="og:title" content="Hugo导航栏添加二级菜单" />
+<meta property="og:description" content="1.将themes\LoveIt\layouts\partials\header.html修改为下列内容: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" /><meta property="og:image" content="https://barneys.gitee.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-23T20:23:14+08:00" />
+<meta property="article:modified_time" content="2022-02-23T20:23:14+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://barneys.gitee.io/logo.png"/>
+
+<meta name="twitter:title" content="Hugo导航栏添加二级菜单"/>
+<meta name="twitter:description" content="1.将themes\LoveIt\layouts\partials\header.html修改为下列内容: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17"/>
+<meta name="application-name" content="bnblogs">
+<meta name="apple-mobile-web-app-title" content="bnblogs">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" /><link rel="prev" href="https://barneys.gitee.io/loveit%E4%B8%BB%E9%A2%98%E6%94%AF%E6%8C%81mathjax/" /><link rel="next" href="https://barneys.gitee.io/hugo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.a12cacf4b5b41234196cb89042b24a70.css" integrity="md5-oSys9LW0EjQZbLiQQrJKcA=="><link rel="stylesheet" href="/css/style.min.9585552b5660b28b64d180ea7a7e1f66.css" integrity="md5-lYVVK1Zgsotk0YDqen4fZg=="><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.c4b9a109042331f12794212bac10225a.css" integrity="md5-xLmhCQQjMfEnlCErrBAiWg==">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.c4b9a109042331f12794212bac10225a.css" integrity="md5-xLmhCQQjMfEnlCErrBAiWg=="></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.b3d5b75898f1ed885c7d2b538faa8b81.css" integrity="md5-s9W3WJjx7YhcfStTj6qLgQ==">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.b3d5b75898f1ed885c7d2b538faa8b81.css" integrity="md5-s9W3WJjx7YhcfStTj6qLgQ=="></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo导航栏添加二级菜单",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/barneys.gitee.io\/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95\/"
+        },"image": ["https:\/\/barneys.gitee.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "hugo, blog","wordcount":  2576 ,
+        "url": "https:\/\/barneys.gitee.io\/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95\/","datePublished": "2022-02-23T20:23:14+08:00","dateModified": "2022-02-23T20:23:14+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/barneys.gitee.io\/images\/avatar.webp",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "Barney"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
+        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
+        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
+        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
+        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+        <div class="header-title">
+            <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png 1.5x, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"
+        title="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner">
+                
+                <div class="dropdown">
+                    <a href="/posts/" 
+                        class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-tags'></i> 标签 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-book-reader"></i> 科研生活 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/dp/" title="" ><i class="fas fa-sticky-note"></i> 差分隐私 </a><a href="/categories/papers/" title="" ><i class="fas fa-book"></i> 论文笔记 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a><a href="/friends/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-user-friends"></i> 友链 </a><a href="/memo/" title="" ><i class="fas fa-clipboard"></i> 备忘录 </a><a href="/message/" title="" ><i class="fas fa-comment"></i> 留言板 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" target="_blank" rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-blog"></i> bnblogs </a><a href="/" title="" target="_blank"
+                            rel="noopener" ><i class="fab fa-goodreads"></i> gitee镜像站 </a><a href="https://joker-zhang66-github-io.vercel.app/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-caret-square-up"></i> vercel镜像站 </a></div>
+                </div>
+                <a class="menu-item"
+                    href="https://my-docsify.vercel.app/#/README"  title="docsify" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-folder'></i> docsify 
+                </a><a class="menu-item"
+                    href="https://travellings.link/" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+                </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-desktop">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </span><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+            <div class="header-title">
+                <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png 1.5x, https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"
+        title="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215001349.png"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-mobile">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </div>
+                <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </a>
+            </div>
+            <div class="dropdown">
+                <a href="/posts/" 
+                    class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-tags'></i> 标签 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-book-reader"></i> 科研生活 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/dp/" title="" ><i class="fas fa-sticky-note"></i> 差分隐私 </a><a href="/categories/papers/" title="" ><i class="fas fa-book"></i> 论文笔记 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a><a href="/friends/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-user-friends"></i> 友链 </a><a href="/memo/" title="" ><i class="fas fa-clipboard"></i> 备忘录 </a><a href="/message/" title="" ><i class="fas fa-comment"></i> 留言板 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" target="_blank"
+                    rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-blog"></i> bnblogs </a><a href="/" title="" target="_blank" rel="noopener"
+                        ><i class="fab fa-goodreads"></i> gitee镜像站 </a><a href="https://joker-zhang66-github-io.vercel.app/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-caret-square-up"></i> vercel镜像站 </a></div>
+            </div>
+            <a class="menu-item"
+                href="https://my-docsify.vercel.app/#/README"  title="docsify" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-folder'></i> docsify 
+            </a><a class="menu-item"
+                href="https://travellings.link/" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+            </a><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hugo导航栏添加二级菜单</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://hugo.bnblogs.cc/" title="Author" target="_blank" rel="noopener noreffer author" class="author">Barney</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/solution/"><i class="far fa-folder fa-fw"></i>solution</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-23">2022-02-23</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-02-23">2022-02-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2576 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;<span id="/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" class="comment_count" data-flag-title="Hugo导航栏添加二级菜单">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="waline-comment-count" id="waline-comment-count"></span>&nbsp;条评论
+                    </span>&nbsp;</div>
+        </div><div class="content" id="content"><p>1.将<code>themes\LoveIt\layouts\partials\header.html</code>修改为下列内容:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- /* Desktop header */ -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;desktop&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;header-desktop&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-wrapper&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-title&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Site.Home.RelPermalink }}&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Site.Title }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- with .Site.Params.header.title -}}
+</span></span><span class="line"><span class="cl">                {{- with .logo -}}
+</span></span><span class="line"><span class="cl">                {{- dict &#34;Src&#34; . &#34;Class&#34; &#34;logo&#34; | partial &#34;plugin/image.html&#34; -}}
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                {{- with .pre -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-title-pre&#34;</span><span class="p">&gt;</span>{{ . | safeHTML }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                {{- if .typeit -}}
+</span></span><span class="line"><span class="cl">                {{- $id := dict &#34;Content&#34; .name &#34;Scratch&#34; $.Scratch | partial &#34;function/id.html&#34; -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ $id }}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;typeit&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- dict $id (slice $id) | dict &#34;typeitMap&#34; | merge ($.Scratch.Get &#34;this&#34;) | $.Scratch.Set &#34;this&#34; -}}
+</span></span><span class="line"><span class="cl">                {{- else -}}
+</span></span><span class="line"><span class="cl">                {{- .name -}}
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                {{- with .post -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-title-post&#34;</span><span class="p">&gt;</span>{{ . | safeHTML }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                {{- else -}}
+</span></span><span class="line"><span class="cl">                {{- .Site.Title -}}
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-inner&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="c">&lt;!-- {{- range .Site.Menus.main -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">                    {{- $url := .URL | relLangURL -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">                    {{- with .Page -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">                        {{- $url = .RelPermalink -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">                    {{- end -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">                    &lt;a class=&#34;menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}&#34; href=&#34;{{ $url }}&#34;{{ with .Title }} title=&#34;{{ . }}&#34;{{ end }}{{ if (urls.Parse $url).Host }} rel=&#34;noopener noreffer&#34; target=&#34;_blank&#34;{{ end }}&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">                        {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">                    &lt;/a&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">                {{- end -}} --&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- range .Site.Menus.main -}}
+</span></span><span class="line"><span class="cl">                {{ if .HasChildren }}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">a</span> <span class="err">{{</span> <span class="na">if</span> <span class="err">.</span><span class="na">URL</span> <span class="err">}}</span><span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .URL }}&#34;</span> <span class="err">{{</span> <span class="na">else</span> <span class="err">}}</span><span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item menu-more dropbtn&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">.</span><span class="na">Post</span> <span class="err">&#34;</span><span class="na">_blank</span><span class="err">&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="err">}}</span><span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noopener&#34;</span> <span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- .Pre | safeHTML }} {{ .Name }} {{ if ne .Post &#34;_blank&#34; }}{{ .Post | safeHTML -}}{{ end }}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-more-content dropdown-content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- range .Children -}}
+</span></span><span class="line"><span class="cl">                        {{- $url := .URL | relLangURL -}}
+</span></span><span class="line"><span class="cl">                        {{- with .Page -}}
+</span></span><span class="line"><span class="cl">                        {{- $url = .RelPermalink -}}
+</span></span><span class="line"><span class="cl">                        {{- end -}}
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $url }}&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">.</span><span class="na">Post</span> <span class="err">&#34;</span><span class="na">_blank</span><span class="err">&#34;</span> <span class="err">}}</span><span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span>
+</span></span><span class="line"><span class="cl">                            <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noopener&#34;</span> <span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>{{- .Pre | safeHTML }} {{ .Name }} {{ if ne .Post &#34;_blank&#34; }}{{
+</span></span><span class="line"><span class="cl">                            .Post | safeHTML -}}{{ end }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- end -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{ else }}
+</span></span><span class="line"><span class="cl">                {{- $url := .URL | relLangURL -}}
+</span></span><span class="line"><span class="cl">                {{- with .Page -}}
+</span></span><span class="line"><span class="cl">                {{- $url = .RelPermalink -}}
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $url }}&#34;</span> <span class="err">{{</span> <span class="na">with</span> <span class="err">.</span><span class="na">Title</span> <span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ . }}&#34;</span> <span class="err">{{</span> <span class="na">end</span> <span class="err">}}{{</span> <span class="na">if</span> <span class="err">(</span><span class="na">urls</span><span class="err">.</span><span class="na">Parse</span> <span class="err">$</span><span class="na">url</span><span class="err">).</span><span class="na">Host</span> <span class="err">}}</span>
+</span></span><span class="line"><span class="cl">                    <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noopener noreffer&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- .Pre | safeHTML }} {{ .Name }} {{ if ne .Post &#34;_blank&#34; }}{{ .Post | safeHTML -}}{{ end }}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                {{- if .Site.Menus.main -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item delimiter&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                {{- if .Site.IsMultiLingual -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item language&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ T &#34;</span> <span class="na">selectLanguage</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- .Language.LanguageName -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-chevron-right fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;language-select&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;language-select-desktop&#34;</span> <span class="na">onchange</span><span class="o">=</span><span class="s">&#34;location = this.value;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- if eq .Kind &#34;404&#34; -}}
+</span></span><span class="line"><span class="cl">                        {{- /* https://github.com/dillonzq/LoveIt/issues/378 */ -}}
+</span></span><span class="line"><span class="cl">                        {{- range .Sites -}}
+</span></span><span class="line"><span class="cl">                        {{- $link := printf &#34;%v/404.html&#34; .LanguagePrefix -}}
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{ $link }}&#34;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">.</span> <span class="err">$.</span><span class="na">Site</span> <span class="err">}}</span> <span class="na">selected</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                            {{- .Language.LanguageName -}}
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- end -}}
+</span></span><span class="line"><span class="cl">                        {{- else -}}
+</span></span><span class="line"><span class="cl">                        {{- range .AllTranslations -}}
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">.</span><span class="na">Lang</span> <span class="err">$.</span><span class="na">Lang</span> <span class="err">}}</span> <span class="na">selected</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                            {{- .Language.LanguageName -}}
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- end -}}
+</span></span><span class="line"><span class="cl">                        {{- end -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                {{- if .Site.Params.search.enable -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item search&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-desktop&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-input-desktop&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-button search-toggle&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-toggle-desktop&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ T `search` }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-search fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-button search-clear&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-clear-desktop&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ T `clear` }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-times-circle fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-button search-loading&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-loading-desktop&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-spinner fa-fw fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item theme-switch&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ T &#34;</span> <span class="na">switchTheme</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-adjust fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- /* Mobile header */ -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mobile&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;header-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-wrapper&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-title&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Site.Home.RelPermalink }}&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Site.Title }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- with .Site.Params.header.title -}}
+</span></span><span class="line"><span class="cl">                    {{- with .logo -}}
+</span></span><span class="line"><span class="cl">                    {{- dict &#34;Src&#34; . &#34;Class&#34; &#34;logo&#34; | partial &#34;plugin/image.html&#34; -}}
+</span></span><span class="line"><span class="cl">                    {{- end -}}
+</span></span><span class="line"><span class="cl">                    {{- with .pre -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-title-pre&#34;</span><span class="p">&gt;</span>{{ . | safeHTML }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- end -}}
+</span></span><span class="line"><span class="cl">                    {{- if .typeit -}}
+</span></span><span class="line"><span class="cl">                    {{- $id := dict &#34;Content&#34; .name &#34;Scratch&#34; $.Scratch | partial &#34;function/id.html&#34; -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;{{ $id }}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;typeit&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- dict $id (slice $id) | dict &#34;typeitMap&#34; | merge ($.Scratch.Get &#34;this&#34;) | $.Scratch.Set &#34;this&#34;
+</span></span><span class="line"><span class="cl">                    -}}
+</span></span><span class="line"><span class="cl">                    {{- else -}}
+</span></span><span class="line"><span class="cl">                    {{- .name -}}
+</span></span><span class="line"><span class="cl">                    {{- end -}}
+</span></span><span class="line"><span class="cl">                    {{- with .post -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-title-post&#34;</span><span class="p">&gt;</span>{{ . | safeHTML }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- end -}}
+</span></span><span class="line"><span class="cl">                    {{- else -}}
+</span></span><span class="line"><span class="cl">                    {{- .Site.Title -}}
+</span></span><span class="line"><span class="cl">                    {{- end -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-toggle&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;menu-toggle-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;menu-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- if .Site.Params.search.enable -}}
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-wrapper&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search mobile&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-input-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-button search-toggle&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-toggle-mobile&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ T `search` }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-search fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-button search-clear&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-clear-mobile&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ T `clear` }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-times-circle fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-button search-loading&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-loading-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-spinner fa-fw fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-cancel&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-cancel-mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{ T `cancel` }}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- end -}}
+</span></span><span class="line"><span class="cl">            {{- $currentPage := . -}}
+</span></span><span class="line"><span class="cl">            {{- range .Site.Menus.main -}}
+</span></span><span class="line"><span class="cl">            {{ if .HasChildren }}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">a</span> <span class="err">{{</span> <span class="na">if</span> <span class="err">.</span><span class="na">URL</span> <span class="err">}}</span><span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .URL }}&#34;</span><span class="err">{{</span> <span class="na">else</span> <span class="err">}}</span><span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item menu-more dropbtn&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">.</span><span class="na">Post</span> <span class="err">&#34;</span><span class="na">_blank</span><span class="err">&#34;</span> <span class="err">}}</span><span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noopener&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- .Pre | safeHTML }} {{ .Name }} {{ if ne .Post &#34;_blank&#34; }}{{ .Post | safeHTML -}}{{ end }}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-more-content dropdown-content&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- range .Children -}}
+</span></span><span class="line"><span class="cl">                            {{- $url := .URL | relLangURL -}}
+</span></span><span class="line"><span class="cl">                            {{- with .Page -}}
+</span></span><span class="line"><span class="cl">                                {{- $url = .RelPermalink -}}
+</span></span><span class="line"><span class="cl">                            {{- end -}}
+</span></span><span class="line"><span class="cl">                                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $url }}&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ .Title }}&#34;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">.</span><span class="na">Post</span> <span class="err">&#34;</span><span class="na">_blank</span><span class="err">&#34;</span> <span class="err">}}</span><span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noopener&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>{{- .Pre | safeHTML }} {{ .Name }} {{ if ne .Post &#34;_blank&#34; }}{{ .Post | safeHTML -}}{{ end }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- end -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{ else }}
+</span></span><span class="line"><span class="cl">                {{- $url := .URL | relLangURL -}}
+</span></span><span class="line"><span class="cl">                {{- with .Page -}}
+</span></span><span class="line"><span class="cl">                    {{- $url = .RelPermalink -}}
+</span></span><span class="line"><span class="cl">                {{- end -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $url }}&#34;</span><span class="err">{{</span> <span class="na">with</span> <span class="err">.</span><span class="na">Title</span> <span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ . }}&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}{{</span> <span class="na">if</span> <span class="err">(</span><span class="na">urls</span><span class="err">.</span><span class="na">Parse</span> <span class="err">$</span><span class="na">url</span><span class="err">).</span><span class="na">Host</span> <span class="err">}}</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;noopener noreffer&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- .Pre | safeHTML }} {{ .Name }} {{ if ne .Post &#34;_blank&#34; }}{{ .Post | safeHTML -}}{{ end }}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- end -}}
+</span></span><span class="line"><span class="cl">        {{- end -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- {{- range .Site.Menus.main -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">            {{- $url := .URL | relLangURL -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">            {{- with .Page -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">            {{- $url = .RelPermalink -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">            {{- end -}} --&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- &lt;a class=&#34;menu-item&#34; href=&#34;{{ $url }}&#34; title=&#34;{{ .Title }}&#34; {{ if (urls.Parse $url).Host }}
+</span></span></span><span class="line"><span class="cl"><span class="c">                rel=&#34;noopener noreffer&#34; target=&#34;_blank&#34; {{ end }}&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">                {{- .Pre | safeHTML }}{{ .Name }}{{ .Post | safeHTML -}}
+</span></span></span><span class="line"><span class="cl"><span class="c">            &lt;/a&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">            {{- end -}} --&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item theme-switch&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ T &#34;</span> <span class="na">switchTheme</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-adjust fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- if .Site.IsMultiLingual -}}
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:void(0);&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu-item&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;{{ T &#34;</span> <span class="na">selectLanguage</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                {{- .Language.LanguageName -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-chevron-right fa-fw&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;language-select&#34;</span> <span class="na">onchange</span><span class="o">=</span><span class="s">&#34;location = this.value;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- if eq .Kind &#34;404&#34; -}}
+</span></span><span class="line"><span class="cl">                    {{- /* https://github.com/dillonzq/LoveIt/issues/378 */ -}}
+</span></span><span class="line"><span class="cl">                    {{- range .Sites -}}
+</span></span><span class="line"><span class="cl">                    {{- $link := printf &#34;%v/404.html&#34; .LanguagePrefix -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{ $link }}&#34;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">.</span> <span class="err">$.</span><span class="na">Site</span> <span class="err">}}</span> <span class="na">selected</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- .Language.LanguageName -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- end -}}
+</span></span><span class="line"><span class="cl">                    {{- else -}}
+</span></span><span class="line"><span class="cl">                    {{- range .AllTranslations -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;{{ .RelPermalink }}&#34;</span> <span class="err">{{</span> <span class="na">if</span> <span class="na">eq</span> <span class="err">.</span><span class="na">Lang</span> <span class="err">$.</span><span class="na">Lang</span> <span class="err">}}</span> <span class="na">selected</span><span class="err">{{</span> <span class="na">end</span> <span class="err">}}</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                        {{- .Language.LanguageName -}}
+</span></span><span class="line"><span class="cl">                    <span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                    {{- end -}}
+</span></span><span class="line"><span class="cl">                    {{- end -}}
+</span></span><span class="line"><span class="cl">                <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- end -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-dropdown desktop&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-dropdown-desktop&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;search-dropdown mobile&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;search-dropdown-mobile&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{ if or .Params.math .Site.Params.math }}
+</span></span><span class="line"><span class="cl">{{ partial &#34;math.html&#34; . }}
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2.找到<code>themes\LoveIt\assets\css\_custom.scss</code>文件，添加下列内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="cm">/* 子菜单栏 */</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.dropdown</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">inline-block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 子菜单的内容 (默认隐藏) */</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.dropdown-content</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">position</span><span class="o">:</span> <span class="ni">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#f9f9f9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">box-shadow</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">16</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border-radius</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.3</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 子菜单的链接 */</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.dropdown-content</span> <span class="nt">a</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">padding</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">18</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">text-decoration</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">&amp;</span> <span class="nt">i</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">margin-right</span><span class="o">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 鼠标移上去后修改子菜单链接颜色 */</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.dropdown-content</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#f1f1f1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">border-radius</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/* 在鼠标移上去后显示子菜单 */</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.dropdown</span><span class="nd">:hover</span> <span class="nc">.dropdown-content</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">@media</span> <span class="ni">screen</span> <span class="ow">and</span> <span class="p">(</span><span class="na">max-width</span><span class="o">:</span> <span class="mi">680</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nc">.dropdown</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="na">display</span><span class="o">:</span> <span class="ni">inline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">.dropdown</span><span class="nd">:hover</span> <span class="nc">.dropdown-content</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">display</span><span class="o">:</span> <span class="ni">inline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">z-index</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">margin-top</span><span class="o">:</span> <span class="o">-</span><span class="mi">2</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">margin-left</span><span class="o">:</span> <span class="mi">3</span><span class="kt">em</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nc">.dropdown-content</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">background-color</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>3.在<code>config.toml</code>中添加导航栏二级标题
+我的配置文件如下，效果可点击本博客的导航栏自行查看：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[languages.zh-cn.menu]
+</span></span><span class="line"><span class="cl">  [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">      identifier = &#34;posts&#34;
+</span></span><span class="line"><span class="cl">      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+</span></span><span class="line"><span class="cl">      pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+</span></span><span class="line"><span class="cl">      post = &#34;&#34;
+</span></span><span class="line"><span class="cl">      name = &#34;所有文章&#34;
+</span></span><span class="line"><span class="cl">      url = &#34;/posts/&#34;
+</span></span><span class="line"><span class="cl">      title = &#34;&#34;
+</span></span><span class="line"><span class="cl">      weight = 1
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">      identifier = &#34;tags&#34;
+</span></span><span class="line"><span class="cl">      pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">      post = &#34;&#34;
+</span></span><span class="line"><span class="cl">      name = &#34;标签&#34;
+</span></span><span class="line"><span class="cl">      url = &#34;/tags/&#34;
+</span></span><span class="line"><span class="cl">      title = &#34;&#34;
+</span></span><span class="line"><span class="cl">      weight = 2
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">      identifier = &#34;categories&#34;
+</span></span><span class="line"><span class="cl">      pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">      post = &#34;&#34;
+</span></span><span class="line"><span class="cl">      name = &#34;分类&#34;
+</span></span><span class="line"><span class="cl">      url = &#34;/categories/&#34;
+</span></span><span class="line"><span class="cl">      title = &#34;&#34;
+</span></span><span class="line"><span class="cl">      weight = 3
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">        identifier = &#34;research&#34;
+</span></span><span class="line"><span class="cl">        pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">        name = &#34;科研生活&#34;
+</span></span><span class="line"><span class="cl">        url = &#34;&#34;
+</span></span><span class="line"><span class="cl">        title = &#34;&#34;
+</span></span><span class="line"><span class="cl">        weight = 4
+</span></span><span class="line"><span class="cl">    # 导航栏二级菜单
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">        parent = &#34;research&#34; 
+</span></span><span class="line"><span class="cl">        identifier = &#34;papers&#34;
+</span></span><span class="line"><span class="cl">        pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">        post = &#34;_blank&#34;
+</span></span><span class="line"><span class="cl">        name = &#34;论文笔记&#34;
+</span></span><span class="line"><span class="cl">        url = &#34;/categories/papers/&#34;
+</span></span><span class="line"><span class="cl">        title = &#34;&#34;
+</span></span><span class="line"><span class="cl">        weight = 4
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">        parent = &#34;research&#34;
+</span></span><span class="line"><span class="cl">        identifier = &#34;DP&#34;
+</span></span><span class="line"><span class="cl">        pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">        post = &#34;_blank&#34;
+</span></span><span class="line"><span class="cl">        name = &#34;差分隐私&#34;
+</span></span><span class="line"><span class="cl">        url = &#34;/DP/&#34;
+</span></span><span class="line"><span class="cl">        title = &#34;&#34;
+</span></span><span class="line"><span class="cl">        weight = 4
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">        identifier = &#34;door&#34;
+</span></span><span class="line"><span class="cl">        pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">        name = &#34;传送门&#34;
+</span></span><span class="line"><span class="cl">        url = &#34;&#34;
+</span></span><span class="line"><span class="cl">        title = &#34;&#34;
+</span></span><span class="line"><span class="cl">        weight = 5
+</span></span><span class="line"><span class="cl">    # 导航栏二级菜单
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">      identifier = &#34;friends&#34;
+</span></span><span class="line"><span class="cl">      pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">      post = &#34;_blank&#34;
+</span></span><span class="line"><span class="cl">      name = &#34;友链&#34;
+</span></span><span class="line"><span class="cl">      url = &#34;/friends/&#34;
+</span></span><span class="line"><span class="cl">      title = &#34;&#34;
+</span></span><span class="line"><span class="cl">      weight = 5
+</span></span><span class="line"><span class="cl">      parent = &#34;door&#34;
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">      parent = &#34;door&#34;
+</span></span><span class="line"><span class="cl">      identifier = &#34;message&#34;
+</span></span><span class="line"><span class="cl">      pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">      post = &#34;&#34;
+</span></span><span class="line"><span class="cl">      name = &#34;留言板&#34;
+</span></span><span class="line"><span class="cl">      url = &#34;/message/&#34;
+</span></span><span class="line"><span class="cl">      title = &#34;&#34;
+</span></span><span class="line"><span class="cl">      weight = 5
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">      parent = &#34;door&#34;
+</span></span><span class="line"><span class="cl">      identifier = &#34;about&#34;
+</span></span><span class="line"><span class="cl">      pre = &#34;&#34;
+</span></span><span class="line"><span class="cl">      post = &#34;&#34;
+</span></span><span class="line"><span class="cl">      name = &#34;关于&#34;
+</span></span><span class="line"><span class="cl">      url = &#34;/about/&#34;
+</span></span><span class="line"><span class="cl">      title = &#34;&#34;
+</span></span><span class="line"><span class="cl">      weight = 5
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">      identifier = &#34;gitee&#34;
+</span></span><span class="line"><span class="cl">      pre = &#34;&lt;i class=&#39;fab fa-github&#39; style=&#39;color:red&#39;&gt;&lt;/i&gt;&#34;
+</span></span><span class="line"><span class="cl">      post = &#34;&#34;
+</span></span><span class="line"><span class="cl">      name = &#34;&#34;
+</span></span><span class="line"><span class="cl">      url = &#34;https://gitee.com/Barneys&#34;
+</span></span><span class="line"><span class="cl">      title = &#34;gitee&#34;
+</span></span><span class="line"><span class="cl">      weight = 6
+</span></span><span class="line"><span class="cl">    [[languages.zh-cn.menu.main]]
+</span></span><span class="line"><span class="cl">      identifier = &#34;github&#34;
+</span></span><span class="line"><span class="cl">      pre = &#34;&lt;i class=&#39;fab fa-github&#39; style=&#39;color:black&#39;&gt;&lt;/i&gt;&#34;
+</span></span><span class="line"><span class="cl">      post = &#34;&#34;
+</span></span><span class="line"><span class="cl">      name = &#34;&#34;
+</span></span><span class="line"><span class="cl">      url = &#34;https://GitHub.com/JokerZhang66&#34;
+</span></span><span class="line"><span class="cl">      title = &#34;GitHub&#34;
+</span></span><span class="line"><span class="cl">      weight = 7
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>子菜单其实和原本的菜单一样写法，只是多了一个<code>parent</code>属性，用来定位到对应的父菜单的<code>identifier</code>。</p>
+<p>通过给菜单配置一个<code>post = &quot;_blank&quot;</code>属性来将该菜单设置为在新窗口打开该链接，如果<code>post</code>属性填其他值则依然作为原本的功能使用：即给<code>name</code>添加后缀。</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-02-23</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/posts\hugo导航栏添加二级菜单.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/HEIGE-PCloud/DoIt/edit/main/exampleSite/content/posts\hugo导航栏添加二级菜单.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20Hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95&body=|Field|Value|%0A|-|-|%0A|Title|Hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95|%0A|Url|https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/posts\hugo导航栏添加二级菜单.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" data-title="Hugo导航栏添加二级菜单" data-hashtags="hugo,blog"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Facebook" data-sharer="facebook" data-url="https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" data-hashtag="hugo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" data-title="Hugo导航栏添加二级菜单"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Line" data-sharer="line" data-url="https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" data-title="Hugo导航栏添加二级菜单"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 微博" data-sharer="weibo" data-url="https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" data-title="Hugo导航栏添加二级菜单" data-ralateuid="6289381214"><i class="fab fa-weibo fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/" data-title="Hugo导航栏添加二级菜单" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">hugo</a>,&nbsp;<a href="/tags/blog/">blog</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/loveit%E4%B8%BB%E9%A2%98%E6%94%AF%E6%8C%81mathjax/" class="prev" rel="prev" title="LoveIt主题支持MathJax"><i class="fas fa-angle-left fa-fw"></i>LoveIt主题支持MathJax</a>
+            <a href="/hugo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD/" class="next" rel="next" title="Hugo添加文章加密功能">Hugo添加文章加密功能<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="waline" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 gitee 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://hugo.bnblogs.cc/" target="_blank" rel="noopener noreferrer">Barney</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a>
+
+        <a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.4c5305a5255032858d47ae995b20aeca.css" integrity="md5-TFMFpSVQMoWNR66ZWyCuyg=="><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.48c9993700b46eacbb64b90dd4693703.js" integrity="md5-SMmZNwC0bqy7ZLkN1Gk3Aw=="></script><script type="text/javascript" src="/lib/lunr/lunr.min.a5d5513b86327998d25c64e1144a1b91.js" integrity="md5-pdVRO4YyeZjSXGThFEobkQ=="></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.99074db0b11436c1fb9b2cfbb9214743.js" integrity="md5-mQdNsLEUNsH7myz7uSFHQw=="></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.f29617b7a917cbd474e1982954339811.js" integrity="md5-8pYXt6kXy9R04ZgpVDOYEQ=="></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.b82368b55ab941d0bb7db421e1084d6c.js" integrity="md5-uCNotVq5QdC7fbQh4QhNbA=="></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.780b6c687c0fa94aafcd976fedb0c871.js" integrity="md5-eAtsaHwPqUqvzZdv7bDIcQ=="></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.4a48532bf0b17c058b8b6854f49de23f.js" integrity="md5-SkhTK/CxfAWLi2hU9J3iPw==" defer></script><script type="text/javascript" src="/lib/topbar/topbar.min.d1b243f03e8431338028ab6bccbe9243.js" integrity="md5-0bJD8D6EMTOAKKtrzL6SQw=="></script><script type="text/javascript" src="/lib/pjax/pjax.min.36c19fbf6fa57ad29c7a0a11e5696883.js" integrity="md5-NsGfv2&#43;letKcegoR5Wlogw=="></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script type="text/javascript" src="/js/custom.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"waline":{"copyright":true,"dark":"body[theme='dark'], body[theme='black']","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji"],"highlight":true,"lang":"zh-cn","login":"enable","meta":["nick","mail","link"],"pageSize":100,"requiredMeta":["nick","mail"],"serverURL":"https://my-waline-one.vercel.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"desktop-header-typeit":"Barney's Blog","mobile-header-typeit":"Barney's Blog"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":0,"speed":100}};</script><script type="text/javascript" src="/lib/waline/Waline.min.74cf6bc1a135ed34617bb482fb215fc5.js" integrity="md5-dM9rwaE17TRhe7SC&#43;yFfxQ==" defer></script><script type="text/javascript" src="/js/waline.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.70122806a31939745c1f3fd5d2e845f2.js" integrity="md5-cBIoBqMZOXRcHz/V0uhF8g=="></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.2493a49c3eb456e424fc22ba22d027a8.js" integrity="md5-JJOknD60VuQk/CK6ItAnqA=="></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.99c66a33f2a42b61f289e7c9b884a899.js" integrity="md5-mcZqM/KkK2HyiefJuISomQ=="></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.46a19c0236eccc86e5cd3b2521f8c69a.js" integrity="md5-RqGcAjbszIblzTslIfjGmg=="></script><script type="text/javascript" src="/lib/sharer/sharer.min.b834cfb885a9d1d9cc75ca8215372179.js" integrity="md5-uDTPuIWp0dnMdcqCFTcheQ=="></script><script type="text/javascript" src="/lib/typeit/typeit.min.9d25659879cc88596096d4ad38a5a303.js" integrity="md5-nSVlmHnMiFlgltStOKWjAw=="></script><script type="text/javascript" src="/lib/katex/katex.min.bfca83b6fc4c575b0498dd592bc6f83f.js" integrity="md5-v8qDtvxMV1sEmN1ZK8b4Pw==" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.8634ca81ec07bf42c8a5a6d433a04cd7.js" integrity="md5-hjTKgewHv0LIpabUM6BM1w==" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.1d34f04be48d9e25b6284ea3189a9850.js" integrity="md5-HTTwS&#43;SNniW2KE6jGJqYUA==" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.9b29ccab32b45fb570484fdf14724255.js" integrity="md5-mynMqzK0X7VwSE/fFHJCVQ==" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.a16e59257986febeb0baaee33f5b0a78.css" integrity="md5-oW5ZJXmG/r6wuq7jP1sKeA=="><link rel="stylesheet" href="/lib/katex/katex.min.77c065b9647e4c1b9748679c7d2029e3.css" integrity="md5-d8BluWR&#43;TBuXSGecfSAp4w=="><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.727189e34fc67f1c2e7020d67aada5dc.css" integrity="md5-cnGJ40/GfxwucCDWeq2l3A==">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.727189e34fc67f1c2e7020d67aada5dc.css" integrity="md5-cnGJ40/GfxwucCDWeq2l3A=="></noscript></div></body>
+
+</html>

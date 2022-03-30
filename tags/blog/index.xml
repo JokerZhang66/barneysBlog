@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>blog - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/blog/</link>
+        <description>blog - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 23 Feb 2022 20:57:17 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/blog/" rel="self" type="application/rss+xml" /><item>
+    <title>博客功能展示</title>
+    <link>https://barneys.gitee.io/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/</link>
+    <pubDate>Wed, 30 Jun 2021 20:21:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211204152837.png" referrerpolicy="no-referrer">
+            </div><p>展示博客主题的相关功能</p>]]></description>
+</item><item>
+    <title>Hugo添加文章加密功能</title>
+    <link>https://barneys.gitee.io/hugo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD/</link>
+    <pubDate>Wed, 23 Feb 2022 20:57:17 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/hugo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD/</guid>
+    <description><![CDATA[1.找到themes\LoveIt\layouts\posts\single.html文件,在{{- $params := .Scratch.Get &quot;params&quot; -}}的下一行添加下列内容： 1 2]]></description>
+</item><item>
+    <title>Hugo导航栏添加二级菜单</title>
+    <link>https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/</link>
+    <pubDate>Wed, 23 Feb 2022 20:23:14 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/</guid>
+    <description><![CDATA[1.将themes\LoveIt\layouts\partials\header.html修改为下列内容: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]]></description>
+</item><item>
+    <title>LoveIt主题支持MathJax</title>
+    <link>https://barneys.gitee.io/loveit%E4%B8%BB%E9%A2%98%E6%94%AF%E6%8C%81mathjax/</link>
+    <pubDate>Wed, 23 Feb 2022 17:08:03 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/loveit%E4%B8%BB%E9%A2%98%E6%94%AF%E6%8C%81mathjax/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/v2-9e54e7a8e09e4c6a3ae596279212dae5_720w.jpg" referrerpolicy="no-referrer">
+            </div>1.将config.toml中的KaTeX数学公式支持修改为false 1 2 [params.page.math] enable = false 2.新建themes\LoveIt\layouts\par]]></description>
+</item></channel>
+</rss>
