@@ -686,7 +686,7 @@ int main( )
 
 ## c++结构体
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200108203103.png" caption="">}}
+{{< image src="/images/img/20200108203103.png" caption="">}}
 
 C 语言的 struct 定义了一组变量的集合，C 编译器并不认为这是一种新的类型。
 

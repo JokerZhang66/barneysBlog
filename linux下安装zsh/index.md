@@ -25,7 +25,7 @@ github地址：[https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/o
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215211324.png" caption="安装成功">}}
+{{< image src="/images/img/20220215211324.png" caption="安装成功">}}
 
 ### 3.修改主题
 
@@ -37,7 +37,7 @@ vim ~/.zshrc
 
 修改主题为`ZSH_THEME="ys"`
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220215211921.png" caption="修改主题">}}
+{{< image src="/images/img/20220215211921.png" caption="修改主题">}}
 
 退出`zsh`，<strong style="color:red">重新进入`zsh`即可生效</strong>
 

@@ -4,7 +4,7 @@
         <link>https://barneys.gitee.io/</link>
         <description>Welcome to Barney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
-            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 17 Mar 2022 23:40:18 &#43;0800</lastBuildDate>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 06 Aug 2022 21:36:15 &#43;0800</lastBuildDate>
             <atom:link href="https://barneys.gitee.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>博客功能展示</title>
@@ -13,8 +13,107 @@
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211204152837.png" referrerpolicy="no-referrer">
+                <img src="/images/img/20211204152837.png" referrerpolicy="no-referrer">
             </div><p>展示博客主题的相关功能</p>]]></description>
+</item><item>
+    <title>vim入门</title>
+    <link>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Sat, 31 Jul 2021 22:52:40 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[vim基础操作]]></description>
+</item><item>
+    <title>git基础</title>
+    <link>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</link>
+    <pubDate>Mon, 02 Aug 2021 12:46:34 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</guid>
+    <description><![CDATA[持续更新中。。。]]></description>
+</item><item>
+    <title>Python小概念</title>
+    <link>https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/</link>
+    <pubDate>Sat, 06 Aug 2022 21:36:15 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/</guid>
+    <description><![CDATA[持续更新中。。。]]></description>
+</item><item>
+    <title>Hugo主题推荐</title>
+    <link>https://barneys.gitee.io/hugo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/</link>
+    <pubDate>Thu, 04 Aug 2022 14:48:25 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/hugo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/</guid>
+    <description><![CDATA[纯属个人主观推荐]]></description>
+</item><item>
+    <title>Test</title>
+    <link>https://barneys.gitee.io/test/</link>
+    <pubDate>Sun, 31 Jul 2022 00:23:48 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/test/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Vercel部署本地项目</title>
+    <link>https://barneys.gitee.io/vercel%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</link>
+    <pubDate>Sat, 30 Jul 2022 18:56:23 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vercel%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</guid>
+    <description><![CDATA[vercel导入本地项目]]></description>
+</item><item>
+    <title>git-bash如何使用tmux</title>
+    <link>https://barneys.gitee.io/git-bash%E4%BD%BF%E7%94%A8tmux/</link>
+    <pubDate>Fri, 29 Jul 2022 23:41:02 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/git-bash%E4%BD%BF%E7%94%A8tmux/</guid>
+    <description><![CDATA[1.下载并安装msys2下载和安装教程:https://www.msys2.org/ 2.安装成功后运行bash-shell 运行下面的命令安装]]></description>
+</item><item>
+    <title>SpringBoot2.7新建项目Maven下载依赖出错</title>
+    <link>https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/</link>
+    <pubDate>Mon, 25 Jul 2022 16:36:15 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/</guid>
+    <description><![CDATA[错误截图 解决方案自行安装本地Maven,IDEA中修改下面红框中的三个位置，分别对应Maven的安装路径、settings.xml位置、本地]]></description>
+</item><item>
+    <title>git简单入门</title>
+    <link>https://barneys.gitee.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/</link>
+    <pubDate>Sat, 23 Jul 2022 23:57:04 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/</guid>
+    <description><![CDATA[git和github快速上手]]></description>
+</item><item>
+    <title>FL-Market: Trading Private Models in Federated Learning</title>
+    <link>https://barneys.gitee.io/paper11/</link>
+    <pubDate>Sat, 25 Jun 2022 15:20:35 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper11/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div>FL-Market]]></description>
+</item><item>
+    <title>Optimal Auctions through Deep Learning</title>
+    <link>https://barneys.gitee.io/paper10/</link>
+    <pubDate>Sat, 25 Jun 2022 15:07:58 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper10/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div>RegretNet]]></description>
+</item><item>
+    <title>ULPT: A User-Centric Location Privacy Trading Framework for Mobile Crowd Sensing</title>
+    <link>https://barneys.gitee.io/paper09/</link>
+    <pubDate>Fri, 06 May 2022 22:53:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper09/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>ULPT框架</p>]]></description>
+</item><item>
+    <title>Locally Differentially Private Protocols for Frequency Estimation</title>
+    <link>https://barneys.gitee.io/paper08/</link>
+    <pubDate>Wed, 13 Apr 2022 22:53:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/paper08/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
+            </div><p>LDP频率估计</p>]]></description>
 </item><item>
     <title>Nginx安装和卸载</title>
     <link>https://barneys.gitee.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</link>
@@ -22,104 +121,5 @@
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</guid>
     <description><![CDATA[安装Nginx1 2 sudo apt-get update sudo apt-get install nginx 卸载Nginx1 2 3 4 sudo apt-get remove nginx nginx-common # 卸载删除除了配置文件以外的所有文件。 sudo apt-get purge nginx nginx-common # 卸载所有东东，包括删除配置]]></description>
-</item><item>
-    <title>修复Uptime Kuma一个小错误</title>
-    <link>https://barneys.gitee.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</link>
-    <pubDate>Thu, 17 Mar 2022 19:45:07 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</guid>
-    <description><![CDATA[问题描述 解决方案 在location /中添加下列两行: 1 2 proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &#34;upgrade&#34;;]]></description>
-</item><item>
-    <title>修改了ssh默认端口如何配置git</title>
-    <link>https://barneys.gitee.io/%E4%BF%AE%E6%94%B9%E4%BA%86ssh%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/</link>
-    <pubDate>Mon, 14 Mar 2022 14:58:53 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/%E4%BF%AE%E6%94%B9%E4%BA%86ssh%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEgit/</guid>
-    <description><![CDATA[由于安全或者其它原因，我们可能会修改默认的SSH服务端口号，默认情况下，已有的git项目在pull或者push的时候会报错。 现在假设原来的项]]></description>
-</item><item>
-    <title>Go语言语法踩坑</title>
-    <link>https://barneys.gitee.io/go%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E8%B8%A9%E5%9D%91/</link>
-    <pubDate>Tue, 08 Mar 2022 23:56:14 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/go%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95%E8%B8%A9%E5%9D%91/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Ubuntu20.04彻底卸载mysql8.0</title>
-    <link>https://barneys.gitee.io/ubuntu%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDmysql8/</link>
-    <pubDate>Tue, 08 Mar 2022 17:25:49 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/ubuntu%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BDmysql8/</guid>
-    <description><![CDATA[1.查看mysql依赖 1 dpkg --list|grep mysql 2.卸载 mysql-common 1 sudo apt-get remove mysql-common 3.卸载mysql-server-8.0 1 sudo apt-get autoremove --purge mysql-server-8.0 4.清除残留数据 1 dpkg -l|grep ^rc|awk &#39;{print$2}&#39;|sudo xargs dpkg -P 5.再]]></description>
-</item><item>
-    <title>Ubuntu上使用docker安装mysql</title>
-    <link>https://barneys.gitee.io/ubuntu%E4%B8%8A%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85mysql/</link>
-    <pubDate>Mon, 07 Mar 2022 18:01:43 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/ubuntu%E4%B8%8A%E4%BD%BF%E7%94%A8docker%E5%AE%89%E8%A3%85mysql/</guid>
-    <description><![CDATA[1.docker仓库搜索mysql1 docker search mysql 2.docker仓库拉取mysql8.0镜像1 docker pull mysql:8.0 docker pull mysql #拉取最新版本的mysql 3.查看本地镜]]></description>
-</item><item>
-    <title>Hugo添加文章加密功能</title>
-    <link>https://barneys.gitee.io/hugo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD/</link>
-    <pubDate>Wed, 23 Feb 2022 20:57:17 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/hugo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E5%8A%9F%E8%83%BD/</guid>
-    <description><![CDATA[1.找到themes\LoveIt\layouts\posts\single.html文件,在{{- $params := .Scratch.Get &quot;params&quot; -}}的下一行添加下列内容： 1 2]]></description>
-</item><item>
-    <title>Hugo导航栏添加二级菜单</title>
-    <link>https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/</link>
-    <pubDate>Wed, 23 Feb 2022 20:23:14 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/hugo%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%B7%BB%E5%8A%A0%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95/</guid>
-    <description><![CDATA[1.将themes\LoveIt\layouts\partials\header.html修改为下列内容: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]]></description>
-</item><item>
-    <title>LoveIt主题支持MathJax</title>
-    <link>https://barneys.gitee.io/loveit%E4%B8%BB%E9%A2%98%E6%94%AF%E6%8C%81mathjax/</link>
-    <pubDate>Wed, 23 Feb 2022 17:08:03 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/loveit%E4%B8%BB%E9%A2%98%E6%94%AF%E6%8C%81mathjax/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/v2-9e54e7a8e09e4c6a3ae596279212dae5_720w.jpg" referrerpolicy="no-referrer">
-            </div>1.将config.toml中的KaTeX数学公式支持修改为false 1 2 [params.page.math] enable = false 2.新建themes\LoveIt\layouts\par]]></description>
-</item><item>
-    <title>Linux下安装zsh</title>
-    <link>https://barneys.gitee.io/linux%E4%B8%8B%E5%AE%89%E8%A3%85zsh/</link>
-    <pubDate>Tue, 15 Feb 2022 20:27:23 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/linux%E4%B8%8B%E5%AE%89%E8%A3%85zsh/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1200x630wa.png" referrerpolicy="no-referrer">
-            </div><p>以官方文档为准</p>]]></description>
-</item><item>
-    <title>备忘录</title>
-    <link>https://barneys.gitee.io/memo/</link>
-    <pubDate>Thu, 10 Feb 2022 16:19:51 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/memo/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master//img/20220211100004.png" referrerpolicy="no-referrer">
-            </div>持续更新中]]></description>
-</item><item>
-    <title>Online Pricing and Trading of Private Data in Correlated Queries</title>
-    <link>https://barneys.gitee.io/paper07/</link>
-    <pubDate>Tue, 25 Jan 2022 21:48:47 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/paper07/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/bachelors-degree-graduation-cap-2844275-free-cliparts-on-bachelors-degree-png-920_472.png" referrerpolicy="no-referrer">
-            </div><p>第七篇文献笔记</p>]]></description>
-</item><item>
-    <title>服务器配置笔记</title>
-    <link>https://barneys.gitee.io/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Sun, 16 Jan 2022 16:11:54 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E5%92%8C%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[<p>持续更新</p>]]></description>
-</item><item>
-    <title>Nvim补全配置记录</title>
-    <link>https://barneys.gitee.io/nvim%E8%A1%A5%E5%85%A8%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</link>
-    <pubDate>Sun, 16 Jan 2022 13:50:05 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/nvim%E8%A1%A5%E5%85%A8%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/</guid>
-    <description><![CDATA[安装及删除nvim1 2 sudo apt-get install neovim # 安装 sudo apt remove neovim # 删除 安装nodejs及npm1 2 sudo apt install nodejs npm nodejs --version # 查看版本 升级nodejs到最新版本(coc.n]]></description>
 </item></channel>
 </rss>

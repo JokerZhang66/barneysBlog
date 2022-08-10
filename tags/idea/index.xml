@@ -11,7 +11,7 @@
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/idea%E9%85%8D%E7%BD%AEgit%E7%8E%AF%E5%A2%83/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/IDEA&amp;Git.JPG" referrerpolicy="no-referrer">
+                <img src="/images/img/IDEA&amp;Git.JPG" referrerpolicy="no-referrer">
             </div><p>IDEA和Git交互</p>]]></description>
 </item></channel>
 </rss>

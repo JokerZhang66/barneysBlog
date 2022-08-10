@@ -44,7 +44,7 @@ int main()
 
 ## #include插入文件
 
-![](https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200109174607.png)
+![](/images/img/20200109174607.png)
 
 ## 宏定义应用
 

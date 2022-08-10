@@ -1,7 +1,7 @@
 # 算法作业
 
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/008361837_1-177dbd1e09b007a92a3b401a61cb62f8.png" caption="">}}</center>
+<center>{{< image src="/images/img/008361837_1-177dbd1e09b007a92a3b401a61cb62f8.png" caption="">}}</center>
 
 ### 0-1背包
 
@@ -216,7 +216,7 @@ int main()
 
 **结果说明：**
 
-![](https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211222135724.png)
+![](/images/img/20211222135724.png)
 
 <strong style="color:red;">**输出路径(构成最小成树的三条边):**</strong>
 
@@ -246,7 +246,7 @@ impossible
 
 <strong style='color:red;'>非连通图无法构成最小生成树!</strong>
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211222141114.png" caption="">}}</center>
+<center>{{< image src="/images/img/20211222141114.png" caption="">}}</center>
 
 **代码实现：**
 

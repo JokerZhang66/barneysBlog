@@ -9,7 +9,7 @@
 
 ### 原文截图
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210927184154.png" caption="">}}</center>
+<center>{{< image src="/images/img/20210927184154.png" caption="">}}</center>
 
 ### 摘要
 

@@ -3,7 +3,9 @@
 
 ### 关于本站
 
-本博客网站采用的是[Doit主题](https://github.com/HEIGE-PCloud/DoIt)，评论系统为`waline`，参考本博客的文章时请注明出处。本站为镜像站点，请访问主站:[https://hugo.bnblogs.cc](https://hugo.bnblogs.cc),添加友链，留言等也请直接访问主站。
+本博客网站采用的是[DoIt主题](https://github.com/HEIGE-PCloud/DoIt)，评论系统为`waline`，参考本博客的文章时请注明出处。
+
+本博客部署在`github pages`，使用`腾讯云cdn`进行加速, 推荐访问[主站](https://hugo.bnblogs.cc)(特别是国内用户)
 
 ### 关于博主
 
@@ -19,8 +21,8 @@ email：tzhangfp@163.com
 
 <table>
     <tr>
-        <td>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210722215940.png" caption="微信">}}
-        <td>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210722220052.jpg" caption="qq" width="55%">}}
+        <td>{{< image src="/images/img/20210722215940.png" caption="微信">}}
+        <td>{{< image src="/images/img/20210722220052.jpg" caption="qq" width="55%">}}
     </tr>
 </table>
 

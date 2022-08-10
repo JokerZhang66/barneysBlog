@@ -19,9 +19,9 @@
 
 > 4.插入图片
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211204153013.png" caption="测试图片">}}
+{{< image src="/images/img/20211204153013.png" caption="测试图片">}}
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211204153201.png" caption="图片2" >}}
+{{< image src="/images/img/20211204153201.png" caption="图片2" >}}
 
 > 5.插入链接
 
@@ -127,4 +127,3 @@ pdf展示效果
 
 {{</* acfun ac14349183 */>}}
 ```
-

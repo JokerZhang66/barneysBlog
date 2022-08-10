@@ -11,7 +11,7 @@
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/centos%E5%AE%89%E8%A3%85nvim/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/Neovim-logo.svg.png" referrerpolicy="no-referrer">
+                <img src="/images/img/Neovim-logo.svg.png" referrerpolicy="no-referrer">
             </div><p>nvim使用教程</p>]]></description>
 </item></channel>
 </rss>

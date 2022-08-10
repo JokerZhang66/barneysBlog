@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>react - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/react/</link>
+        <description>react - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 18 Dec 2021 21:55:47 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/react/" rel="self" type="application/rss+xml" /><item>
+    <title>Vscode新建React项目</title>
+    <link>https://barneys.gitee.io/vscode%E6%96%B0%E5%BB%BAreact%E9%A1%B9%E7%9B%AE/</link>
+    <pubDate>Sat, 18 Dec 2021 21:55:47 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vscode%E6%96%B0%E5%BB%BAreact%E9%A1%B9%E7%9B%AE/</guid>
+    <description><![CDATA[首先需要安装nodejs,官网地址:点此 换源1 2 3 npm config set proxy null npm config set https-proxy null npm config set registry https://registry.npm.taobao.org 新建一个React项目1 2 3 npx create-react-app my-react-app cd my-react-app npm start]]></description>
+</item></channel>
+</rss>

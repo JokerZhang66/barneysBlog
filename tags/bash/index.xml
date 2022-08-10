@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>bash - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/bash/</link>
+        <description>bash - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 29 Jul 2022 23:41:02 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/bash/" rel="self" type="application/rss+xml" /><item>
+    <title>git-bash如何使用tmux</title>
+    <link>https://barneys.gitee.io/git-bash%E4%BD%BF%E7%94%A8tmux/</link>
+    <pubDate>Fri, 29 Jul 2022 23:41:02 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/git-bash%E4%BD%BF%E7%94%A8tmux/</guid>
+    <description><![CDATA[1.下载并安装msys2下载和安装教程:https://www.msys2.org/ 2.安装成功后运行bash-shell 运行下面的命令安装]]></description>
+</item></channel>
+</rss>

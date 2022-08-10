@@ -15,7 +15,7 @@
 
 > 1.无线传感器网络设计与实现
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210703232234.png" caption="无线传感器网络设计与实现">}}
+{{< image src="/images/img/20210703232234.png" caption="无线传感器网络设计与实现">}}
 
 **书籍概述**：基于 ZigBee2007，对于理解和使用 Zstack 协议栈有很大帮助，书中采用 CC2530 节点构建 ZigBee 网络，值得一看！
 
@@ -25,7 +25,7 @@
 
 > 2.Python 编程-从入门到实践
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210703231836.png" caption="Python编程-从入门到实践">}}
+{{< image src="/images/img/20210703231836.png" caption="Python编程-从入门到实践">}}
 
 **书籍概述**：通俗易懂，非常适合刚开始学习编程的同学！
 
@@ -35,7 +35,7 @@
 
 > 3.机器学习
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210703232107.png" caption="机器学习">}}
+{{< image src="/images/img/20210703232107.png" caption="机器学习">}}
 
 **书籍概述**：机器学习入门书籍，大名鼎鼎的西瓜书
 
@@ -47,7 +47,7 @@
 
 > 1.周志华-做研究与写论文 PPT
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20210703231338.png" caption="做研究与写论文">}}
+{{< image src="/images/img/20210703231338.png" caption="做研究与写论文">}}
 
 **文档概述**：如果你是一名即将参加科研的硕士研究生，这本书对将来的科研规划提供了很好的经验，必读！
 

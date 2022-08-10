@@ -1,482 +1,125 @@
 # git基础
 
-git和github基本操作
 <!--more-->
-{{< admonition >}}
-本文尚未完善，请谨慎采纳！
+
+### git基本概念
+
+<center>{{<image src= "/images/all/git_process.png" caption="git工作流">}}</center>
+
+1.`工作区`(Workspace)：本地存放代码的地方
+
+2.`暂存区`(Stage/Index)：数据暂时存放的区域，类似于工作区写入版本库前的缓存区。暂存区是独立于各个分支的。
+
+3.`版本库`(Repository)：存放所有已经提交(commit)到本地仓库的代码版本(.git文件夹目录)
+
+4.`版本结构`：树结构，树中每个节点代表一个代码版本。
+
+5.`远程仓库`(Remote)： 托管代码的服务器(比如Github)
+
+
+### git工作流程
+
+`git`的工作流程一般是这样的：
+
+１、在工作目录中添加、修改文件；
+
+２、将需要进行版本管理的文件放入暂存区域；
+
+３、将暂存区域的文件提交到`git`仓库。
+
+因此，git管理的文件有三种状态：已修改（`modified`）,已暂存（`staged`）,已提交(`committed`)
+
+### git常用命令
+
+{{< admonition warning>}}
+对于使用多个git平台的用户，建议不要使用全局配置，配置多平台可参考[这里](https://hugo.bnblogs.cc/gitee%E5%92%8Cgit%E5%B9%B6%E5%AD%98/)
 {{< /admonition >}}
-## git基本操作
 
-1.创建一个版本库
+1.`git config --global user.name xxx`：设置全局用户名，信息记录在`~/.gitconfig`文件中
 
-新建一个目录git_test,在git_test目录下创建一个版本库
+2.`git config --global user.email xxx@xxx.com`：设置全局邮箱地址，信息记录在`~/.gitconfig`文件中
 
-```
-git init
-```
+3.`git init`：将当前目录配置成`git`仓库，信息记录在隐藏的`.git`文件夹中
 
-2.在git_test下创建一个新文件code.txt
+4.`git add XX`：将XX文件的变动添加到暂存区
 
-```
-vi code.txt#创建一个新文件
-cat code.txt#查看文件中的内容
-```
+- `git add .`： 会把当前目录及子孙目录里的变动都加到暂存区
+- `git add -A`: 会将项目里所有文件的变动都加到暂存区，也就是说该命令不论在项目的哪级目录执行，都有同样的效果。
 
-3.新建一个文件版本（比如将上面的code.txt保存为一个版本）
+5.`git rm --cached XX`：将文件从仓库索引目录中删掉,表示不再跟踪该文件
 
-```
-git add code.txt
-git add . //一次添加所有文件
-git commit -m '版本一'（-m 后面是说明信息）
-```
+6.`git restore --staged XXX`: 将XXX从暂存区移除,当该文件还保留在工作区(执行了add命令但后悔了，可以用这个命令将文件从暂存区撤出，但是工作区的修改没有撤销)
 
-4.设置自己的github信息
+7.`git commit -m "给自己看的备注信息"`：将暂存区的内容提交到当前分支
 
-```
- git config --global user.email "你的邮箱"
- git config --global user.name "github名字"
-```
+8.`git status`：查看仓库状态
 
-5.查看提交的版本记录
+9.`git diff -- 文件名`：查看具体某个文件 在工作区和暂存区之间的差异
 
-```
-git log  //查看日志
-```
+- `git diff -- 文件名1 文件名2 文件名3`：查看多个文件在工作区和暂存区之间的差异
 
-Commit：版本编号
+10.`git log`：查看当前分支的所有版本(从起始点到HEAD)
+- `git log --pretty=oneline`: 简化后的日志状态(一行表示一个版本)
 
-Author：用户名<邮箱>
+11.`git reflog`：查看HEAD指针的移动历史（包括被回滚的版本）
 
-Date：创建时间
+12.`git reset --hard HEAD^` 或 `git reset --hard HEAD~`：将代码库回滚到上一个版本
+- `git reset --hard HEAD^^`：往上回滚两次，以此类推
+- `git reset --hard HEAD~100`：往上回滚`100`个版本
+- `git reset --hard 版本号`：回滚到某一特定版本
 
-简短的显示方式
+13.`git checkout XX`或`git restore XX`：将XX文件尚未加入暂存区的修改全部撤销 (所以用于将文件恢复到上一个版本的状态)
 
-```
-git log --oneline
-```
+{{< admonition >}}
+对于工作区修改了但是未加入暂存区的文件，使用`git status`查看文件状态是`红色`的，
+而加入暂存区未提交的状态是`绿色`的
+{{< /admonition >}}
 
-6.再次创建一个新版本(与第三步的操作相同)
+14.`git remote add origin git@git.acwing.com:xxx/XXX.git`：将本地仓库关联到远程仓库
 
-## git日志操作
+15.`git push -u` (第一次需要`-u`以后不需要)：将当前分支推送到远程仓库
+- 带上`-u`参数其实就相当于记录了`push`到远端分支的默认值，这样当下次我们还想要继续`push`的这个远端分支的时候推送命令就可以简写成`git push`即可
 
-`git log`常用操作命令
+16.`git push origin branch_name`：将本地的某个分支推送到远程仓库
 
-```
-git log -p //还可以查看文件不同
-git log -1 //最近一次的提交
-git log -2 //显示行号
-git log --oneline -p //简短显示且显示文件修改
-git log --name-only //显示发生变化的文件名 
-git log --name-status //查看发生变化的文件及其变化类型
-```
+17.`git clone git@git.acwing.com:xxx/XXX.git`：将远程仓库XXX下载到当前目录下
 
-## git版本回退
+18.`git branch`：查看所有分支和当前所处分支
 
-git版本回退就是回到之前的版本，**版本是由一个叫HEAD的指针来指向**
+19.`git branch -d branch_name`：删除本地仓库的`branch_name`分支
 
-回到某个版本的时候，如上我们创建了两个版本库：版本一和版本二
+20.`git branch branch_name`：创建新分支
 
-当前版本：HEAD
+21.`git checkout branch_name`：切换到`branch_name`这个分支
 
-前一版本：HEAD^(多少个^号代表前多少个版本)
+22.`git checkout -b branch_name`：创建并切换到`branch_name`这个分支
 
-HEAD~100（后面的数字代表第多少个版本）
+23.`git merge branch_name`：将分支`branch_name`合并到当前分支上
 
-回到上一版本使用命令如下：
+24.`git push --set-upstream origin branch_name`：设置本地的`branch_name`分支对应远程仓库的`branch_name`分支(在远程创建一个`branch_name`的新分支并推送过去)
 
-```
-git reset --hard HEAD^
-```
+25.`git push -d origin branch_name`：删除远程仓库的`branch_name`分支
 
-如果想回到当前版本
+26.`git pull`：将远程仓库的当前分支与本地仓库的当前分支合并
 
-版本标号就是commit之后的内容
+27.`git pull origin branch_name`：将远程仓库的`branch_name`分支与本地仓库的当前分支合并
 
-```
-git reset --hard 版本编号
-```
+28.`git branch --set-upstream-to=origin/branch_name1 branch_name2`：将远程的`branch_name1`分支与本地的`branch_name2`分支对应
 
-如果终端关闭了不知道版本号了，可以使用命令查看历史操作记录
+29.`git checkout -t origin/branch_name`： 将远程的`branch_name`分支拉取到本地
 
-```
-git reflog
-```
+30.`git stash`：将工作区和暂存区中尚未提交的修改存入栈中
 
-## 工作区和版本库
+- `git stash apply`：将栈顶存储的修改恢复到当前分支，但不删除栈顶元素
+- `git stash drop`：删除栈顶存储的修改
+- `git stash pop`：将栈顶存储的修改恢复到当前分支，同时删除栈顶元素
+- `git stash list`：查看栈中所有元素
 
-工作区：用来编辑的目录如上文的git_test
+31.`git ls-files`：查看暂存区有哪些文件
 
-版本库：工作区的一个隐藏目录**.git**就是版本库
+### 参考
 
-暂存区：版本库中保存了许多东西，其中最重要的就是**stage**，这就是暂存区
-
-`git`还为我们自动创建了第一个分支`master`，以及指向master的指针`HEAD`
-
-<span style='color:red'>git add</span>:将文件保存道暂存区中
-
-<span style='color:red'>git commit</span>:将暂存区中的文件一次性提交到当前分支，就是一次版本记录
-
-git status：查看当前文件的状态(是否修改或者提交)
-
-## git管理修改
-
-注意：git管理文件的修改，它只会提交暂存区中的修改来创建版本
-
-也就是说，文件修改后要及时使用git add 添加到暂存区，否则不会保存在记录中
-
-取消暂存区中的文件的暂存
-
-```
-git reset HEAD 文件名
-```
-
-## 撤销文件修改
-
-使用命令来撤销
-
-```
-git checkout -- 文件名
-```
-
-恢复文件(vim 操作和内容无关)
-
-```
-vim -r 文件名
-```
-
-- 场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git  checkout  --  file。
-- 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git  reset HEAD  file，就回到了场景1，第二步按场景1操作。
-- 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一~
-
-## 对比文件的不同
-
-**对比工作区中的文件和版本库中的文件的不同**
-
-```
-git diff HEAD -- 文件名
-```
-
-+：工作区的文件
-
--：版本库中的文件
-
-其他为公共文件
-
-**对比两个不同的版本库中的文件的不同**
-
-```
-git diff HEAD HEAD^ -- 文件名
-```
-
-## 更改版本库中的文件名称
-
-修改提交的文件名字
-
-```git
-git mv 旧文件名 新文件名
-```
-
-## amend命令
-
-1.修改最新一次提交的更新
-
-```
-git commit --amend 
-```
-
-2.将一个新文件加入到上一次提交中
-
-```git
-git add 新文件名
-git commit --amend //增加提交信息
-```
-
-## 删除文件
-
-linux删除命令
-
-```
-rm 文件名
-```
-
-接下来将其加入暂存区(没有加入到暂存区，git无法保存删除的文件)
-
-```
-git add 文件名
-####或者
-git rm '文件名' //会删除本地的文件
-git rm --cached 文件名 //保留本地的文件,相当于从暂存区中取出这个文件
-```
-
-创建记录
-
-```
-git commit -m '描述'
-```
-
-## git分支操作
-
-创建分支
-
-```
-git branch 分支名
-```
-
-切换分支
-
-```
-git checkout 分支名
-```
-
-查看当前所有分支
-
-```
-git branch
-```
-
-创建并切换到一个新分支，作为备用分支
-
-```
-git checkout -b dev
-```
-
-修改文件内容，创建版本记录，提交到新分支
-
-分支切换
-
-```
-git checkout 分支名
-```
-
-分支合并（Fast - forward 快速合并）
-
-将某分支合并到当前分支
-
-```
-git merge 分支名
-```
-
-合并完成后，删除分支dev
-
-```
-git branch -d dev
-```
-
-## 冲突解决
-
-**如果两个分支有文件同时被修改，需要解决这个冲突，否则合并失败**
-
-**可以手动将该冲突解决，再提交到主分支**
-
-查看冲突解决
-
-```
-git log --graph --pretty=oneline
-```
-
-## 分支管理策略
-
-当两个分支之间的内容没有冲突时(即没有修改同一个文件)，这时后不能使用快速合并(Fast-forward)
-
-例如：
-
-1.新建一个dev分支，创建一个新文件code3.txt并提交一次记录
-
-2.在master分支下修改文件code.txt，并提交记录
-
-3.进行快速合并时会出现弹窗
-
-4.输入保存的记录名，按ctrl + x 离开，按Y保存，按Enter键退出
-
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20191208114736.png" caption="">}}
-
-5.查看修改记录
-
-注意：在这次合并时，可以不采用快速合并的方式，可以将快速合并方式给禁用
-
-使用快速合并模式时，命令是
-
-```
-git merge dev
-```
-
-禁用快速合并模式：
-
-```
-git merge --no-ff -m '禁用fast-forward' dev
-```
-
-## bug分支
-
-遇到紧急的的bug修改时，要现停下手头工作，但是当前自己的工作现场不能丢，需要先保存下来
-
-使用命令,保存现场
-
-```
-git stash
-```
-
-修复完bug，在使用命令恢复工作现场
-
-```
-git stash pop
-```
-
-修复bug时可以切换到master分支，新建一个bug分支，修复完成之后，再使用`--no-ff`模式进行合并到master分支，之后删除bug分支。
-
-## .gitignore
-
-在这个文件添加你要取消跟踪的文件
-
-<span style='color:red'>注意: git中文件夹中没有文件默认时不跟踪的</span>
-
-``` 
-*.txt //忽略所有后缀为.txt的文件
-a.txt //忽略a.txt这个文件
-!a.txt //这个文件重新跟踪
-/folder //忽略floder这个文件夹
-/folder/a.txt //忽略floder目录下的a.txt文件
-/folder/**/*.txt //忽略folder及其子目录下的txt文件
-```
-
-## github的使用
-
-### 1.创建仓库
-
-{{< image src="https://cdn.jsdelivr.net/gh/Barneys/images@master/img/20210801124405.png" caption="">}}
-
-创建成功
-
-{{< image src="https://cdn.jsdelivr.net/gh/Barneys/images@master/img/20210801124441.png" caption="">}}
-
-`.gitignore`里标注了忽略的文件类型
-
-{{< image src="https://cdn.jsdelivr.net/gh/Barneys/images@master/img/20210801124512.png" caption="">}}
-
-### 2.添加ssh账户
-
-添加ssk公钥之后，本机才能与github仓库进行交互
-
-使用命令生成公钥，一直按Enter键就好了
-
-```
-ssh-keygen -t rsa -C '邮箱地址'
-```
-
-![](https://cdn.jsdelivr.net/gh/Barneys/images@master/img/20210801123938.png)
-
-会生成在/ho文件夹下，打开里面的文件id_rsa.pub获取公钥
-
-```
-cd /home/zhangfp/.ssh/
-ls -a
-cat id_rsa.pub 
-```
-
-把ssh公钥信息添加到github的设置中
-
-{{< image src="https://cdn.jsdelivr.net/gh/Barneys/images@master/img/20210801124050.png" caption="">}}
-
-
-### 3.克隆项目
-
-使用命令
-
-```
-git clone + '链接'
-```
-
-如果遇到Broken pipe错误，参考以下代码
-
-```
-vim ~/.ssh/config #打开.ssh文件夹下的config目录 
- 
-#添加内容
-
-Host *
-IPQoS lowdelay throughput
- 
-#修改权限
-chmod 644  ~/.ssh/config
-```
-
-## 推送代码
-
-日常开发时，可以新建并切换到这个新的分支，比如smart
-
-```
-git checkout -b smart
-```
-
-把完成的代码提交一次版本记录
-
-```
-git add 文件名
-git commit -m '提交'
-```
-
-将该分支推送到远程的github服务器上
-
-```
-git push origin 分支名
-```
-
-## github跟踪远程
-
-和远程的仓库进行链接
-
-```
-git remote add origin git@gitee.com:liaoxuefeng/learngit.git//建议使用ssh方式
-```
-
-为了检查当前工作分支和github上分支的信息是否同步
-
-让本地的某个分支跟踪远程的分支，使用命令
-
-```
-git branch --set-upstream-to=origin/smart smart
-```
-
-分支 'smart' 设置为跟踪来自 'origin' 的远程分支 'smart'。
-
-跟踪之后，可以直接使用
-
-```
-git push
-```
-
-将该分支推送到远端
-
-## 从远程分支上拉取代码
-
-将github上的origin的分支拉取到本地
-
-```
-git pull origin 分支名
-```
-
-master:用户保存发布的代码，1.0版本，2.0版本
-
-dev:用户在开发过程中的代码。
-
-## 给别人的github仓库贡献代码
-
-1.将别人的仓库fork过来(直接克隆没有修改的权限)
-
-2.打开终端，使用git  clone + 你的项目地址
-
-3.进行项目修改，下一步可以上传到你的github，可以使用git status检查是否修改成功
-
-4.本地提交一次
-
-5.推动到远端的github项目里
-
-```
-git push origin 分支名
-```
-
-6.新建一个pull request ，注意要在你推送的分支里
-
-7.等待github仓库主人的同意，就能合并成功
-
-
+{{< admonition quote >}}
+1.[https://www.acwing.com/file_system/file/content/whole/index/content/2932078/](https://www.acwing.com/file_system/file/content/whole/index/content/2932078/)
+2.[https://www.cnblogs.com/qdhxhz/p/9757390.html](https://www.cnblogs.com/qdhxhz/p/9757390.html)
+{{< /admonition >}}

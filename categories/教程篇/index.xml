@@ -4,7 +4,28 @@
         <link>https://barneys.gitee.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/</link>
         <description>教程篇 - 分类 - Barney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
-            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 17 Mar 2022 23:40:18 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 23 Jul 2022 23:57:04 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/categories/%E6%95%99%E7%A8%8B%E7%AF%87/" rel="self" type="application/rss+xml" /><item>
+    <title>vim入门</title>
+    <link>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Sat, 31 Jul 2021 22:52:40 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[vim基础操作]]></description>
+</item><item>
+    <title>git基础</title>
+    <link>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</link>
+    <pubDate>Mon, 02 Aug 2021 12:46:34 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</guid>
+    <description><![CDATA[持续更新中。。。]]></description>
+</item><item>
+    <title>git简单入门</title>
+    <link>https://barneys.gitee.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/</link>
+    <pubDate>Sat, 23 Jul 2022 23:57:04 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/</guid>
+    <description><![CDATA[git和github快速上手]]></description>
+</item><item>
     <title>Nginx安装和卸载</title>
     <link>https://barneys.gitee.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</link>
     <pubDate>Thu, 17 Mar 2022 23:40:18 &#43;0800</pubDate><author>
@@ -12,13 +33,20 @@
     </author><guid>https://barneys.gitee.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</guid>
     <description><![CDATA[安装Nginx1 2 sudo apt-get update sudo apt-get install nginx 卸载Nginx1 2 3 4 sudo apt-get remove nginx nginx-common # 卸载删除除了配置文件以外的所有文件。 sudo apt-get purge nginx nginx-common # 卸载所有东东，包括删除配置]]></description>
 </item><item>
+    <title>Vscode新建React项目</title>
+    <link>https://barneys.gitee.io/vscode%E6%96%B0%E5%BB%BAreact%E9%A1%B9%E7%9B%AE/</link>
+    <pubDate>Sat, 18 Dec 2021 21:55:47 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vscode%E6%96%B0%E5%BB%BAreact%E9%A1%B9%E7%9B%AE/</guid>
+    <description><![CDATA[首先需要安装nodejs,官网地址:点此 换源1 2 3 npm config set proxy null npm config set https-proxy null npm config set registry https://registry.npm.taobao.org 新建一个React项目1 2 3 npx create-react-app my-react-app cd my-react-app npm start]]></description>
+</item><item>
     <title>Vscode &#43; window Terminal集成git-Bash终端</title>
     <link>https://barneys.gitee.io/vscode%E9%9B%86%E6%88%90conda%E5%92%8Cgit-bash%E7%BB%88%E7%AB%AF/</link>
     <pubDate>Tue, 14 Dec 2021 15:45:35 &#43;0800</pubDate><author>
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/vscode%E9%9B%86%E6%88%90conda%E5%92%8Cgit-bash%E7%BB%88%E7%AB%AF/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220210200308.png" referrerpolicy="no-referrer">
+                <img src="/images/img/20220210200308.png" referrerpolicy="no-referrer">
             </div>1.Vscode集成git-Bash终端使用ctrl + shift + p打开设置,再点开右上角的settings.json,填入下列配置 1 2 3 4 5 &#34;terminal.integrated.profiles.windows&#34;: { &#34;Git-Bash&#34;:]]></description>
 </item><item>
     <title>Ubuntu上的docker操作</title>
@@ -42,31 +70,13 @@
     </author><guid>https://barneys.gitee.io/linux%E5%91%BD%E4%BB%A4/</guid>
     <description><![CDATA[<p>linux常见命令</p>]]></description>
 </item><item>
-    <title>git基础</title>
-    <link>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</link>
-    <pubDate>Sun, 01 Aug 2021 12:46:34 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1_mtsk3fQ_BRemFidhkel3dA.png" referrerpolicy="no-referrer">
-            </div><p>git和github基本操作</p>]]></description>
-</item><item>
     <title>Centos安装nvim</title>
     <link>https://barneys.gitee.io/centos%E5%AE%89%E8%A3%85nvim/</link>
     <pubDate>Sun, 01 Aug 2021 10:25:34 &#43;0800</pubDate><author>
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/centos%E5%AE%89%E8%A3%85nvim/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/Neovim-logo.svg.png" referrerpolicy="no-referrer">
+                <img src="/images/img/Neovim-logo.svg.png" referrerpolicy="no-referrer">
             </div><p>nvim使用教程</p>]]></description>
-</item><item>
-    <title>vim基础操作</title>
-    <link>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
-    <pubDate>Sat, 31 Jul 2021 22:52:40 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master//img/1627743613797-vim-logo.png" referrerpolicy="no-referrer">
-            </div><p>vim基础操作</p>]]></description>
 </item></channel>
 </rss>

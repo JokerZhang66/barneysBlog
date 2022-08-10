@@ -6,29 +6,20 @@
 	], { duration: 10000, fade: 1500 });
 });*/
 
-// /* 点击回到顶部 */
-// $('#back-to-top').click(function () {
-// 	$('html,body').animate({
-// 		scrollTop: '0px'
-// 	}, 500);
-// 		return false;
-// 	});
-// /*  点击滚动到底部 */
-// $('#back-to-bottom').click(function () {
-// 	$('html,body').animate({
-// 		scrollTop: document.getElementsByTagName('BODY')[0].scrollHeight
-// 	}, 500);
-// 	return false;
-// });     
-
-
-
-//点击按钮，返回顶部
-function topFunction() {
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-}
-
+/* 点击回到顶部 */
+$('#back-to-top').click(function () {
+	$('html,body').animate({
+		scrollTop: '0px'
+	}, 500);
+		return false;
+	});
+/*  点击滚动到底部 */
+$('#back-to-bottom').click(function () {
+	$('html,body').animate({
+		scrollTop: document.getElementsByTagName('BODY')[0].scrollHeight
+	}, 500);
+	return false;
+});
 
 function getCurrentDateString() {
 	var now = new Date();

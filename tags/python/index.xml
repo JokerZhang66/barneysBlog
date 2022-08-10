@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>python - 标签 - Barney&#39;s Blog</title>
+        <link>https://barneys.gitee.io/tags/python/</link>
+        <description>python - 标签 - Barney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
+            <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 06 Aug 2022 21:36:15 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Python小概念</title>
+    <link>https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/</link>
+    <pubDate>Sat, 06 Aug 2022 21:36:15 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/</guid>
+    <description><![CDATA[持续更新中。。。]]></description>
+</item></channel>
+</rss>

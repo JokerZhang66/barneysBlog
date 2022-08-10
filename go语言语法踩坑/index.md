@@ -2,7 +2,7 @@
 
 
 <!--more-->
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master//img/20220326174554.png" caption="" >}}
+{{< image src="/images//img/20220326174554.png" caption="" >}}
 
 > 1.变量声明
 

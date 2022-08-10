@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1627744185556-20210731230944.png" caption="运行结果">}}
+{{< image src="/images/img/1627744185556-20210731230944.png" caption="运行结果">}}
 
 ### 多次类型转换使用clear()
 
@@ -85,7 +85,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1627744331050-20210731231210.png" caption="运行结果">}}
+{{< image src="/images/img/1627744331050-20210731231210.png" caption="运行结果">}}
 
 ### 按空格分割字符串
 
@@ -120,7 +120,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1627744402829-20210731231322.png" caption="运行结果">}}
+{{< image src="/images/img/1627744402829-20210731231322.png" caption="运行结果">}}
 
 ## 参考文章链接
 

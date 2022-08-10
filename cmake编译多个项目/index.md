@@ -3,7 +3,7 @@
 同一个文件夹下编译多个c++项目
 <!--more-->
 文件结构图：
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220114132254.png" caption="">}}
+{{< image src="/images/img/20220114132254.png" caption="">}}
 
 CmakeLists.txt文件：
 ```

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">Python小概念 - Barney&#39;s Blog</title><meta name="Description" content="持续更新中。。。"><meta property="og:title" content="Python小概念" />
+<meta property="og:description" content="持续更新中。。。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" /><meta property="og:image" content="https://barneys.gitee.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-06T21:36:15+08:00" />
+<meta property="article:modified_time" content="2022-08-06T21:36:15+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://barneys.gitee.io/logo.png"/>
+
+<meta name="twitter:title" content="Python小概念"/>
+<meta name="twitter:description" content="持续更新中。。。"/>
+<meta name="application-name" content="bnblogs">
+<meta name="apple-mobile-web-app-title" content="bnblogs">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" /><link rel="prev" href="https://barneys.gitee.io/hugo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/" /><link rel="next" href="https://barneys.gitee.io/git%E5%9F%BA%E7%A1%80/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.a12cacf4b5b41234196cb89042b24a70.css" integrity="md5-oSys9LW0EjQZbLiQQrJKcA=="><link rel="stylesheet" href="/css/style.min.1aad55631b8cc26234024718fe10a7d5.css" integrity="md5-Gq1VYxuMwmI0AkcY/hCn1Q=="><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.c4b9a109042331f12794212bac10225a.css" integrity="md5-xLmhCQQjMfEnlCErrBAiWg==">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.c4b9a109042331f12794212bac10225a.css" integrity="md5-xLmhCQQjMfEnlCErrBAiWg=="></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.b3d5b75898f1ed885c7d2b538faa8b81.css" integrity="md5-s9W3WJjx7YhcfStTj6qLgQ==">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.b3d5b75898f1ed885c7d2b538faa8b81.css" integrity="md5-s9W3WJjx7YhcfStTj6qLgQ=="></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Python小概念",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/barneys.gitee.io\/python%E5%B0%8F%E6%A6%82%E5%BF%B5\/"
+        },"image": ["https:\/\/barneys.gitee.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "python","wordcount":  1059 ,
+        "url": "https:\/\/barneys.gitee.io\/python%E5%B0%8F%E6%A6%82%E5%BF%B5\/","datePublished": "2022-08-06T21:36:15+08:00","dateModified": "2022-08-06T21:36:15+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/barneys.gitee.io\/images\/avatar.webp",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "Barney"
+            },"description": "持续更新中。。。"
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
+        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
+        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
+        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
+        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+        <div class="header-title">
+            <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="/images/all/logo.png"
+        data-srcset="/images/all/logo.png, /images/all/logo.png 1.5x, /images/all/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/all/logo.png"
+        title="/images/all/logo.png"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner">
+                
+                <div class="dropdown">
+                    <a href="/posts/" 
+                        class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-tags'></i> 标签 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" target="_blank" rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-blog"></i> bnblogs </a><a href="/" title="" target="_blank"
+                            rel="noopener" ><i class="fab fa-goodreads"></i> gitee镜像站 </a></div>
+                </div>
+                <a class="menu-item"
+                    href="https://my-docsify.vercel.app/#/README"  title="docsify" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-folder'></i> docsify 
+                </a><a class="menu-item"
+                    href="https://travellings.link/" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+                </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-desktop">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </span><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+            <div class="header-title">
+                <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="/images/all/logo.png"
+        data-srcset="/images/all/logo.png, /images/all/logo.png 1.5x, /images/all/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/all/logo.png"
+        title="/images/all/logo.png"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-mobile">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </div>
+                <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </a>
+            </div>
+            <div class="dropdown">
+                <a href="/posts/" 
+                    class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-tags'></i> 标签 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" target="_blank"
+                    rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-blog"></i> bnblogs </a><a href="/" title="" target="_blank" rel="noopener"
+                        ><i class="fab fa-goodreads"></i> gitee镜像站 </a></div>
+            </div>
+            <a class="menu-item"
+                href="https://my-docsify.vercel.app/#/README"  title="docsify" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-folder'></i> docsify 
+            </a><a class="menu-item"
+                href="https://travellings.link/" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+            </a><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-def-__init__self-args-kwargs">1. <code>def __init__(self, *args, **kwargs)</code></a></li>
+        <li><a href="#2bytes和str">2.<code>bytes</code>和<code>str</code></a></li>
+        <li><a href="#3strformat">3.<code>str.format()</code></a></li>
+        <li><a href="#4json">4.<code>json</code></a></li>
+        <li><a href="#5classmethod修饰符">5.<code>classmethod</code>修饰符</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Python小概念</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://hugo.bnblogs.cc/" title="Author" target="_blank" rel="noopener noreffer author" class="author">Barney</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-06">2022-08-06</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-08-06">2022-08-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1059 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" class="comment_count" data-flag-title="Python小概念">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="waline-comment-count" id="waline-comment-count"></span>&nbsp;条评论
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-def-__init__self-args-kwargs">1. <code>def __init__(self, *args, **kwargs)</code></a></li>
+        <li><a href="#2bytes和str">2.<code>bytes</code>和<code>str</code></a></li>
+        <li><a href="#3strformat">3.<code>str.format()</code></a></li>
+        <li><a href="#4json">4.<code>json</code></a></li>
+        <li><a href="#5classmethod修饰符">5.<code>classmethod</code>修饰符</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="1-def-__init__self-args-kwargs" class="headerLink">
+    <a href="#1-def-__init__self-args-kwargs" class="header-mark"></a>1. <code>def __init__(self, *args, **kwargs)</code></h3><ul>
+<li>表示接受任意个数的参数
+<ul>
+<li>如果是没有指定key的参数,会以list的形式存放到args中</li>
+<li>如果是有指定key的参数,会以dict的形式存放到kwargs中</li>
+</ul>
+</li>
+</ul>
+<p><strong>样例:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;无指定的参数为:&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;无指定的参数为:&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="s2">&#34;=&#34;</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">test</span><span class="p">(</span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="s1">&#39;bbb&#39;</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">content</span><span class="o">=</span><span class="s2">&#34;abc&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>输出:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">无指定的参数为:
+</span></span><span class="line"><span class="cl">aaa
+</span></span><span class="line"><span class="cl">bbb
+</span></span><span class="line"><span class="cl">无指定的参数为:
+</span></span><span class="line"><span class="cl">id = 1
+</span></span><span class="line"><span class="cl">content = abc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2bytes和str" class="headerLink">
+    <a href="#2bytes%e5%92%8cstr" class="header-mark"></a>2.<code>bytes</code>和<code>str</code></h3><p><code>bytes</code>是字节流，<code>str</code>是字符串，对应的分别是<code>&lt;class 'bytes'&gt;</code>和 <code>&lt;class 'str'&gt;</code>，对比如下：
+<code>str</code>由若干个字符组成，以字符为单位进行操作；<code>bytes</code>由若干个字节组成，以字节为单位进行操作。
+<code>bytes</code>数据适合在网络中传输</p>
+<p><strong>样例:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">item</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span> <span class="c1"># 空串</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">item1</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;Hello&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">item2</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">item1</span><span class="p">),</span><span class="s2">&#34;/&#34;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">item2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">item1</span><span class="p">:</span> <span class="c1"># 存储字符对应的ASCII码</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">item2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 相互转换</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># bytes-&gt;str</span>
+</span></span><span class="line"><span class="cl"><span class="nb">str</span> <span class="o">=</span> <span class="n">item1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># str-&gt;bytes</span>
+</span></span><span class="line"><span class="cl"><span class="nb">bytes</span> <span class="o">=</span> <span class="n">item2</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">bytes</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>输出:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">b&#39;&#39;
+</span></span><span class="line"><span class="cl">&lt;class &#39;bytes&#39;&gt; / &lt;class &#39;str&#39;&gt;
+</span></span><span class="line"><span class="cl">72
+</span></span><span class="line"><span class="cl">101
+</span></span><span class="line"><span class="cl">108
+</span></span><span class="line"><span class="cl">108
+</span></span><span class="line"><span class="cl">111
+</span></span><span class="line"><span class="cl">H
+</span></span><span class="line"><span class="cl">e
+</span></span><span class="line"><span class="cl">l
+</span></span><span class="line"><span class="cl">l
+</span></span><span class="line"><span class="cl">o
+</span></span><span class="line"><span class="cl">Hello
+</span></span><span class="line"><span class="cl">b&#39;Hello&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3strformat" class="headerLink">
+    <a href="#3strformat" class="header-mark"></a>3.<code>str.format()</code></h3><p><strong>样例:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&#34;Hello&#34;</span><span class="p">,</span> <span class="s2">&#34;World&#34;</span><span class="p">))</span>    <span class="c1"># 不设置指定位置，按默认顺序</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">{0}</span><span class="s2"> </span><span class="si">{1}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&#34;Hello&#34;</span><span class="p">,</span> <span class="s2">&#34;World&#34;</span><span class="p">))</span>  <span class="c1"># 设置指定位置</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">{1}</span><span class="s2"> </span><span class="si">{0}</span><span class="s2"> </span><span class="si">{1}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&#34;Wello&#34;</span><span class="p">,</span> <span class="s2">&#34;World&#34;</span><span class="p">))</span>  <span class="c1"># 设置指定位置</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;id: </span><span class="si">{id}</span><span class="s2"> age: </span><span class="si">{age}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># 变量对应</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Hello&#34;</span><span class="p">,</span><span class="s2">&#34;World&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 通过列表索引设置参数</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;word1: </span><span class="si">{0[0]}</span><span class="s2">, word2: </span><span class="si">{0[1]}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>  <span class="c1"># &#34;0&#34; 是必须的</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 通过字典设置参数</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;id&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="s2">&#34;age&#34;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&#34;sex&#34;</span><span class="p">:</span> <span class="s2">&#34;female&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;id: </span><span class="si">{</span><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">]</span><span class="si">}</span><span class="s1"> age: </span><span class="si">{</span><span class="nb">dict</span><span class="p">[</span><span class="s2">&#34;age&#34;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># format简单用法</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;id: </span><span class="si">{id}</span><span class="s2">, age: </span><span class="si">{age}</span><span class="s2">, sex: </span><span class="si">{sex}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="nb">dict</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 数字格式化</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 保留小数点后两位</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">{:.2f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">3.12344554</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>输出:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Hello World
+</span></span><span class="line"><span class="cl">Hello World
+</span></span><span class="line"><span class="cl">World Wello World
+</span></span><span class="line"><span class="cl">id: 1 age: 20
+</span></span><span class="line"><span class="cl">word1: Hello, word2: World
+</span></span><span class="line"><span class="cl">id: 1 age: 20
+</span></span><span class="line"><span class="cl">id: 1, age: 20, sex: female
+</span></span><span class="line"><span class="cl">3.12
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4json" class="headerLink">
+    <a href="#4json" class="header-mark"></a>4.<code>json</code></h3><p><strong>样例:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span> <span class="p">:</span> <span class="mi">5</span> <span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="c1"># python数据结构编码为JSON数据格式</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">json_str</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">json_str</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># JSON数据格式解码为python数据结构</span>
+</span></span><span class="line"><span class="cl"><span class="n">json_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pprint</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span> <span class="c1"># 可以考虑使用pprint模块的 pprint()函数来代替普通的 print()函数(更美观)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">json_data</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果要处理的是文件而不是字符串</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 将数据写入json文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 读取json文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data_1</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">data_1</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>输出:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4, &#39;e&#39;: 5}
+</span></span><span class="line"><span class="cl">&lt;class &#39;dict&#39;&gt;
+</span></span><span class="line"><span class="cl">{&#34;a&#34;: 1, &#34;b&#34;: 2, &#34;c&#34;: 3, &#34;d&#34;: 4, &#34;e&#34;: 5}
+</span></span><span class="line"><span class="cl">&lt;class &#39;str&#39;&gt;
+</span></span><span class="line"><span class="cl">{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4, &#39;e&#39;: 5}
+</span></span><span class="line"><span class="cl">&lt;class &#39;dict&#39;&gt;
+</span></span><span class="line"><span class="cl">{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4, &#39;e&#39;: 5}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5classmethod修饰符" class="headerLink">
+    <a href="#5classmethod%e4%bf%ae%e9%a5%b0%e7%ac%a6" class="header-mark"></a>5.<code>classmethod</code>修饰符</h3><p><code>classmethod</code>修饰符对应的函数不需要实例化，不需要<code>self</code>参数，但第一个参数需要是表示自身类的<code>cls</code>参数，可以来调用类的属性，类的方法，实例化对象等。</p>
+<p><strong>样例:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Test</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">num</span> <span class="o">=</span> <span class="mi">10000</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">func1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;this is func1&#39;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">    <span class="nd">@classmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">func2</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;this is func2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span> <span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">num</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">cls</span><span class="p">()</span><span class="o">.</span><span class="n">func1</span><span class="p">()</span> <span class="c1">#调用func1方法</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Test</span><span class="o">.</span><span class="n">func2</span><span class="p">()</span> <span class="c1">#不需要实例化</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>输出:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">this is func2
+</span></span><span class="line"><span class="cl">10000
+</span></span><span class="line"><span class="cl">this is func1
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-08-06</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/python%E5%B0%8F%E6%A6%82%E5%BF%B5/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/posts\python小概念.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/HEIGE-PCloud/DoIt/edit/main/exampleSite/content/posts\python小概念.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20Python%E5%B0%8F%E6%A6%82%E5%BF%B5&body=|Field|Value|%0A|-|-|%0A|Title|Python%E5%B0%8F%E6%A6%82%E5%BF%B5|%0A|Url|https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/posts\python小概念.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" data-title="Python小概念" data-hashtags="python"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Facebook" data-sharer="facebook" data-url="https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" data-hashtag="python"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" data-title="Python小概念"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Line" data-sharer="line" data-url="https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" data-title="Python小概念"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 微博" data-sharer="weibo" data-url="https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" data-title="Python小概念" data-ralateuid="6289381214"><i class="fab fa-weibo fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://barneys.gitee.io/python%E5%B0%8F%E6%A6%82%E5%BF%B5/" data-title="Python小概念" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/python/">python</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hugo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/" class="prev" rel="prev" title="Hugo主题推荐"><i class="fas fa-angle-left fa-fw"></i>Hugo主题推荐</a>
+            <a href="/git%E5%9F%BA%E7%A1%80/" class="next" rel="next" title="git基础">git基础<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="waline" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+    <div class="footer-container">
+        <div class="footer-line">
+            <span id="run-time"></span>
+        </div><div class="footer-line">
+            由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer"
+            title="Hugo 0.96.0">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Vercel" href="https://vercel.com/" target="_blank" rel="noopener noreffer">Vercel</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank"
+            rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+        </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a
+                    href="https://hugo.bnblogs.cc/" target="_blank"
+                    rel="noopener noreferrer">Barney</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+    <div class="footer-line">
+    </div>
+    </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a>
+
+        <a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.4c5305a5255032858d47ae995b20aeca.css" integrity="md5-TFMFpSVQMoWNR66ZWyCuyg=="><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.48c9993700b46eacbb64b90dd4693703.js" integrity="md5-SMmZNwC0bqy7ZLkN1Gk3Aw=="></script><script type="text/javascript" src="/lib/lunr/lunr.min.a5d5513b86327998d25c64e1144a1b91.js" integrity="md5-pdVRO4YyeZjSXGThFEobkQ=="></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.99074db0b11436c1fb9b2cfbb9214743.js" integrity="md5-mQdNsLEUNsH7myz7uSFHQw=="></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.f29617b7a917cbd474e1982954339811.js" integrity="md5-8pYXt6kXy9R04ZgpVDOYEQ=="></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.b82368b55ab941d0bb7db421e1084d6c.js" integrity="md5-uCNotVq5QdC7fbQh4QhNbA=="></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.780b6c687c0fa94aafcd976fedb0c871.js" integrity="md5-eAtsaHwPqUqvzZdv7bDIcQ=="></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.4a48532bf0b17c058b8b6854f49de23f.js" integrity="md5-SkhTK/CxfAWLi2hU9J3iPw==" defer></script><script type="text/javascript" src="/lib/topbar/topbar.min.d1b243f03e8431338028ab6bccbe9243.js" integrity="md5-0bJD8D6EMTOAKKtrzL6SQw=="></script><script type="text/javascript" src="/lib/pjax/pjax.min.36c19fbf6fa57ad29c7a0a11e5696883.js" integrity="md5-NsGfv2&#43;letKcegoR5Wlogw=="></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script async defer data-website-id="4a63ddaf-d146-42f4-8145-7d0ef7f7b2a4" src="https://umami.bnblogs.cc/umami.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"waline":{"commentCount":true,"copyright":true,"dark":"body[theme='dark'], body[theme='black']","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji"],"highlight":true,"lang":"zh-cn","login":"enable","meta":["nick","mail","link"],"pageSize":100,"requiredMeta":["nick","mail"],"serverURL":"https://my-waline-one.vercel.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"desktop-header-typeit":"Barney's Blog","mobile-header-typeit":"Barney's Blog"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":0,"speed":100}};</script><script type="text/javascript" src="/lib/waline/Waline.min.74cf6bc1a135ed34617bb482fb215fc5.js" integrity="md5-dM9rwaE17TRhe7SC&#43;yFfxQ==" defer></script><script type="text/javascript" src="/js/waline.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.70122806a31939745c1f3fd5d2e845f2.js" integrity="md5-cBIoBqMZOXRcHz/V0uhF8g=="></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.2493a49c3eb456e424fc22ba22d027a8.js" integrity="md5-JJOknD60VuQk/CK6ItAnqA=="></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.99c66a33f2a42b61f289e7c9b884a899.js" integrity="md5-mcZqM/KkK2HyiefJuISomQ=="></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.46a19c0236eccc86e5cd3b2521f8c69a.js" integrity="md5-RqGcAjbszIblzTslIfjGmg=="></script><script type="text/javascript" src="/lib/sharer/sharer.min.b834cfb885a9d1d9cc75ca8215372179.js" integrity="md5-uDTPuIWp0dnMdcqCFTcheQ=="></script><script type="text/javascript" src="/lib/typeit/typeit.min.9d25659879cc88596096d4ad38a5a303.js" integrity="md5-nSVlmHnMiFlgltStOKWjAw=="></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.a16e59257986febeb0baaee33f5b0a78.css" integrity="md5-oW5ZJXmG/r6wuq7jP1sKeA=="></div></body>
+
+</html>

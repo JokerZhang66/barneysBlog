@@ -4,7 +4,7 @@
 ### 1.Vscode集成git-Bash终端
 
 使用`ctrl + shift + p`打开设置,再点开右上角的`settings.json`,填入下列配置
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211214154842.png" caption="">}}</center>
+<center>{{< image src="/images/img/20211214154842.png" caption="">}}</center>
 
 ```sh
 "terminal.integrated.profiles.windows": {

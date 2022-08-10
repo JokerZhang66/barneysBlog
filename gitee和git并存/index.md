@@ -80,9 +80,9 @@ ssh -T git@gitee.com
 ssh -T git@github.com
 ```
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211203234344.png" caption="配置成功">}}
+{{< image src="/images/img/20211203234344.png" caption="配置成功">}}
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20211203234635.png" caption="下载测试">}}
+{{< image src="/images/img/20211203234635.png" caption="下载测试">}}
 
 ### 5.参考
 

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">SpringBoot2.7新建项目Maven下载依赖出错 - Barney&#39;s Blog</title><meta name="Description" content="Welcome to Barney&#39;s Blog"><meta property="og:title" content="SpringBoot2.7新建项目Maven下载依赖出错" />
+<meta property="og:description" content="错误截图 解决方案自行安装本地Maven,IDEA中修改下面红框中的三个位置，分别对应Maven的安装路径、settings.xml位置、本地" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" /><meta property="og:image" content="https://barneys.gitee.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-25T16:36:15+08:00" />
+<meta property="article:modified_time" content="2022-07-25T16:36:15+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://barneys.gitee.io/logo.png"/>
+
+<meta name="twitter:title" content="SpringBoot2.7新建项目Maven下载依赖出错"/>
+<meta name="twitter:description" content="错误截图 解决方案自行安装本地Maven,IDEA中修改下面红框中的三个位置，分别对应Maven的安装路径、settings.xml位置、本地"/>
+<meta name="application-name" content="bnblogs">
+<meta name="apple-mobile-web-app-title" content="bnblogs">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" /><link rel="prev" href="https://barneys.gitee.io/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/" /><link rel="next" href="https://barneys.gitee.io/git-bash%E4%BD%BF%E7%94%A8tmux/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.a12cacf4b5b41234196cb89042b24a70.css" integrity="md5-oSys9LW0EjQZbLiQQrJKcA=="><link rel="stylesheet" href="/css/style.min.1aad55631b8cc26234024718fe10a7d5.css" integrity="md5-Gq1VYxuMwmI0AkcY/hCn1Q=="><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.c4b9a109042331f12794212bac10225a.css" integrity="md5-xLmhCQQjMfEnlCErrBAiWg==">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.c4b9a109042331f12794212bac10225a.css" integrity="md5-xLmhCQQjMfEnlCErrBAiWg=="></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.b3d5b75898f1ed885c7d2b538faa8b81.css" integrity="md5-s9W3WJjx7YhcfStTj6qLgQ==">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.b3d5b75898f1ed885c7d2b538faa8b81.css" integrity="md5-s9W3WJjx7YhcfStTj6qLgQ=="></noscript><meta name="google-site-verification" content="MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SpringBoot2.7新建项目Maven下载依赖出错",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/barneys.gitee.io\/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99\/"
+        },"image": ["https:\/\/barneys.gitee.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "java, SpringBoot","wordcount":  332 ,
+        "url": "https:\/\/barneys.gitee.io\/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99\/","datePublished": "2022-07-25T16:36:15+08:00","dateModified": "2022-07-25T16:36:15+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/barneys.gitee.io\/images\/avatar.webp",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "Barney"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) { document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); }
+        function saveTheme(theme) { window.localStorage && localStorage.setItem('theme', theme); }
+        function getMeta(metaName) { const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return ''; }
+        if (window.localStorage && localStorage.getItem('theme')) { let theme = localStorage.getItem('theme'); theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light'); }
+        let metaColors = { 'light': '#f8f8f8', 'dark': '#252627', 'black': '#000000' }
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+        <div class="header-title">
+            <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="/images/all/logo.png"
+        data-srcset="/images/all/logo.png, /images/all/logo.png 1.5x, /images/all/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/all/logo.png"
+        title="/images/all/logo.png"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner">
+                
+                <div class="dropdown">
+                    <a href="/posts/" 
+                        class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank"
+                            rel="noopener" ><i class='fas fa-tags'></i> 标签 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="javascript:void(0);" 
+                        class="menu-item menu-more dropbtn" title="" target="_blank" rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                    </a>
+                    <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank"
+                            rel="noopener" ><i class="fas fa-blog"></i> bnblogs </a><a href="/" title="" target="_blank"
+                            rel="noopener" ><i class="fab fa-goodreads"></i> gitee镜像站 </a></div>
+                </div>
+                <a class="menu-item"
+                    href="https://my-docsify.vercel.app/#/README"  title="docsify" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-folder'></i> docsify 
+                </a><a class="menu-item"
+                    href="https://travellings.link/" 
+                    rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+                </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-desktop">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </span><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <a href="https://github.com/Jokerzhang66" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="3.5rem" height="3.5rem" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+            <div class="header-title">
+                <a href="/" title="Barney&#39;s Blog"><img
+        class="lazyload logo"
+        data-src="/images/all/logo.png"
+        data-srcset="/images/all/logo.png, /images/all/logo.png 1.5x, /images/all/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/all/logo.png"
+        title="/images/all/logo.png"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile"
+                        title="搜索">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile"
+                        title="清空">
+                        <i class="fas fa-times-circle fa-fw"></i>
+                    </a>
+                    <span class="search-button search-loading" id="search-loading-mobile">
+                        <i class="fas fa-spinner fa-fw fa-spin"></i>
+                    </span>
+                </div>
+                <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </a>
+            </div>
+            <div class="dropdown">
+                <a href="/posts/" 
+                    class="menu-item menu-more dropbtn" title="" ><i class='fas fa-fw fa-archive'></i> 归档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/categories/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-folder-open'></i> 分类 </a><a href="/tags/" title="" target="_blank" rel="noopener"
+                        ><i class='fas fa-tags'></i> 标签 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-location-arrow"></i> 导航 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="/about/" title="" ><i class='fas fa-user'></i> 关于 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-file-alt"></i> 文档 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.zybuluo.com/yangfch3/note/267947#114-%E5%85%AC%E5%BC%8F%E5%86%85%E6%8D%A2%E8%A1%8C" title="" ><i class="fa fa-infinity"></i> Mathjax </a><a href="https://paperswithcode.com/" title="" ><i class="fa fa-file-code"></i> paperswithcode </a><a href="https://docs.python.org/zh-cn/3/tutorial/index.html" title="" ><i class="fab fa-python"></i> python教程 </a><a href="https://www.r2coding.com/#/README" title="" ><i class="fas fa-file"></i> r2coding </a><a href="https://niceseason.github.io/2020/05/18/springboot%E6%A0%B8%E5%BF%83/" title="" ><i class="fab fa-java"></i> Springboot笔记 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" ><i class="fas fa-arrow-right"></i> 传送门 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://www.latexlive.com/" title="" ><i class="fas fa-link"></i> Latex公式编辑器 </a><a href="https://zh.d2l.ai/index.html" title="" ><i class="fas fa-link"></i> 动手学深度学习 </a><a href="https://visualgo.net/zh" title="" ><i class="fas fa-link"></i> 算法可视化 </a></div>
+            </div>
+            
+            <div class="dropdown">
+                <a href="javascript:void(0);" 
+                    class="menu-item menu-more dropbtn" title="" target="_blank"
+                    rel="noopener" ><i class='fas fa-inbox'></i> 镜像站 
+                </a>
+                <div class="menu-more-content dropdown-content"><a href="https://hugo.bnblogs.cc/" title="" target="_blank" rel="noopener"
+                        ><i class="fas fa-blog"></i> bnblogs </a><a href="/" title="" target="_blank" rel="noopener"
+                        ><i class="fab fa-goodreads"></i> gitee镜像站 </a></div>
+            </div>
+            <a class="menu-item"
+                href="https://my-docsify.vercel.app/#/README"  title="docsify" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-folder'></i> docsify 
+            </a><a class="menu-item"
+                href="https://travellings.link/" 
+                rel="noopener noreffer" target="_blank" ><i class='fas fa-subway'></i> 开往 
+            </a><a href="#" onclick="return false;" class="menu-item theme-select" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">SpringBoot2.7新建项目Maven下载依赖出错</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="https://hugo.bnblogs.cc/" title="Author" target="_blank" rel="noopener noreffer author" class="author">Barney</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/solution/"><i class="far fa-folder fa-fw"></i>solution</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-25">2022-07-25</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-07-25">2022-07-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 332 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" class="comment_count" data-flag-title="SpringBoot2.7新建项目Maven下载依赖出错">
+                        <i class="far fa-comments fa-fw"></i>&nbsp;<span class="waline-comment-count" id="waline-comment-count"></span>&nbsp;条评论
+                    </span>&nbsp;</div>
+        </div><div class="content" id="content"><h3 id="错误截图" class="headerLink">
+    <a href="#%e9%94%99%e8%af%af%e6%88%aa%e5%9b%be" class="header-mark"></a>错误截图</h3><center><a class="lightgallery" href="/images/all/springboot-error.png" title="/images/all/springboot-error.png" data-thumbnail="/images/all/springboot-error.png">
+        <img
+            class="lazyload"
+            data-src="/images/all/springboot-error.png"
+            data-srcset="/images/all/springboot-error.png, /images/all/springboot-error.png 1.5x, /images/all/springboot-error.png 2x"
+            data-sizes="auto"
+            alt="/images/all/springboot-error.png">
+    </a></center>
+<h3 id="解决方案" class="headerLink">
+    <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" class="header-mark"></a>解决方案</h3><p>自行安装本地<code>Maven</code>,<code>IDEA</code>中修改下面红框中的三个位置，分别对应<code>Maven</code>的安装路径、<code>settings.xml</code>位置、本地<code>repository</code>的位置。</p>
+<center><a class="lightgallery" href="/images/all/local_maven.png" title="/images/all/local_maven.png" data-thumbnail="/images/all/local_maven.png">
+        <img
+            class="lazyload"
+            data-src="/images/all/local_maven.png"
+            data-srcset="/images/all/local_maven.png, /images/all/local_maven.png 1.5x, /images/all/local_maven.png 2x"
+            data-sizes="auto"
+            alt="/images/all/local_maven.png">
+    </a></center> 
+<p>下面是我的<code>Maven</code>的<code>settings.xml</code>，<code>Maven</code>版本为<code>3.6.3</code>，<code>JDK</code>版本为<code>1.8</code>，<code>SpringBoot</code>版本为<code>2.7.1</code>,已换阿里源</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;settings</span> <span class="na">xmlns=</span><span class="s">&#34;http://maven.apache.org/SETTINGS/1.0.0&#34;</span> <span class="na">xmlns:xsi=</span><span class="s">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span class="na">xsi:schemaLocation=</span><span class="s">&#34;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;localRepository&gt;</span>D:\apache-maven-3.6.3\repository<span class="nt">&lt;/localRepository&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;pluginGroups&gt;&lt;/pluginGroups&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;proxies&gt;&lt;/proxies&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;servers&gt;&lt;/servers&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;mirrors&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;mirror&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;id&gt;</span>alimaven<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>aliyun maven<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;url&gt;</span>https://maven.aliyun.com/repository/public<span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;mirrorOf&gt;</span>central<span class="nt">&lt;/mirrorOf&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/mirror&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;mirror&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;id&gt;</span>alimaven-central<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>aliyun maven central<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;url&gt;</span>https://maven.aliyun.com/repository/central<span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;mirrorOf&gt;</span>central<span class="nt">&lt;/mirrorOf&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/mirror&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;mirror&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;id&gt;</span>alimaven-spring<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>aliyun maven-spring<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;url&gt;</span>https://maven.aliyun.com/repository/spring<span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;mirrorOf&gt;</span>central<span class="nt">&lt;/mirrorOf&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/mirror&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;mirror&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;id&gt;</span>central<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>Maven Repository Switchboard<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;url&gt;</span>https://repo1.maven.org/maven2/<span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;mirrorOf&gt;</span>central<span class="nt">&lt;/mirrorOf&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/mirror&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;mirror&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;id&gt;</span>jboss-public-repository-group<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;mirrorOf&gt;</span>central<span class="nt">&lt;/mirrorOf&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>JBoss Public Repository Group<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;url&gt;</span>http://repository.jboss.org/nexus/content/groups/public<span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/mirror&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;mirror&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;id&gt;</span>spring-snapshots<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;mirrorOf&gt;</span>central<span class="nt">&lt;/mirrorOf&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>Spring Snapshots<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;url&gt;</span>https://repo.spring.io/snapshot<span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/mirror&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;mirror&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;id&gt;</span>spring-milestones<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;mirrorOf&gt;</span>central<span class="nt">&lt;/mirrorOf&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>Spring Milestones<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;url&gt;</span>https://repo.spring.io/milestone<span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/mirror&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;mirror&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;id&gt;</span>maven-default-http-blocker<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;mirrorOf&gt;</span>external:http:*<span class="nt">&lt;/mirrorOf&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>Pseudo repository to mirror external repositories initially using HTTP.<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;url&gt;</span>http://0.0.0.0/<span class="nt">&lt;/url&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;blocked&gt;</span>true<span class="nt">&lt;/blocked&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/mirror&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/mirrors&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;profiles&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;id&gt;</span>jdk-1.8<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;activation&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;activeByDefault&gt;</span>true<span class="nt">&lt;/activeByDefault&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;jdk&gt;</span>1.8<span class="nt">&lt;/jdk&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/activation&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;properties&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;maven.compiler.source&gt;</span>1.8<span class="nt">&lt;/maven.compiler.source&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;maven.compiler.target&gt;</span>1.8<span class="nt">&lt;/maven.compiler.target&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;maven.compiler.compilerVersion&gt;</span>1.8<span class="nt">&lt;/maven.compiler.compilerVersion&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/properties&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/profiles&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/settings&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-07-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/posts\SpringBoot新建项目Maven下载依赖出错.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/HEIGE-PCloud/DoIt/edit/main/exampleSite/content/posts\SpringBoot新建项目Maven下载依赖出错.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20SpringBoot2.7%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEMaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99&body=|Field|Value|%0A|-|-|%0A|Title|SpringBoot2.7%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEMaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99|%0A|Url|https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/posts\SpringBoot新建项目Maven下载依赖出错.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span><a href="#" onclick="return false;" title="分享到 Twitter" data-sharer="twitter" data-url="https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" data-title="SpringBoot2.7新建项目Maven下载依赖出错" data-hashtags="java,SpringBoot"><i class="fab fa-twitter fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Facebook" data-sharer="facebook" data-url="https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" data-hashtag="java"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" data-title="SpringBoot2.7新建项目Maven下载依赖出错"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Line" data-sharer="line" data-url="https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" data-title="SpringBoot2.7新建项目Maven下载依赖出错"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" onclick="return false;" title="分享到 微博" data-sharer="weibo" data-url="https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" data-title="SpringBoot2.7新建项目Maven下载依赖出错" data-ralateuid="6289381214"><i class="fab fa-weibo fa-fw"></i></a><a href="#" onclick="return false;" title="分享到 Telegram" data-sharer="telegram" data-url="https://barneys.gitee.io/springboot%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AEmaven%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E5%87%BA%E9%94%99/" data-title="SpringBoot2.7新建项目Maven下载依赖出错" data-web><i class="fab fa-telegram-plane fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">Java</a>,&nbsp;<a href="/tags/springboot/">SpringBoot</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/github%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/" class="prev" rel="prev" title="git简单入门"><i class="fas fa-angle-left fa-fw"></i>git简单入门</a>
+            <a href="/git-bash%E4%BD%BF%E7%94%A8tmux/" class="next" rel="next" title="git-bash如何使用tmux">git-bash如何使用tmux<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="waline" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+            </noscript></div></article></div>
+        </main><footer class="footer">
+    <div class="footer-container">
+        <div class="footer-line">
+            <span id="run-time"></span>
+        </div><div class="footer-line">
+            由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer"
+            title="Hugo 0.96.0">Hugo</a> 强力驱动&nbsp;|&nbsp;托管在 <a title="Vercel" href="https://vercel.com/" target="_blank" rel="noopener noreffer">Vercel</a> 上&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank"
+            rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+        </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a
+                    href="https://hugo.bnblogs.cc/" target="_blank"
+                    rel="noopener noreferrer">Barney</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    
+    <div class="footer-line">
+    </div>
+    </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a>
+
+        <a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div id="cookieconsent-container"></div><div class="assets"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.4c5305a5255032858d47ae995b20aeca.css" integrity="md5-TFMFpSVQMoWNR66ZWyCuyg=="><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.48c9993700b46eacbb64b90dd4693703.js" integrity="md5-SMmZNwC0bqy7ZLkN1Gk3Aw=="></script><script type="text/javascript" src="/lib/lunr/lunr.min.a5d5513b86327998d25c64e1144a1b91.js" integrity="md5-pdVRO4YyeZjSXGThFEobkQ=="></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.99074db0b11436c1fb9b2cfbb9214743.js" integrity="md5-mQdNsLEUNsH7myz7uSFHQw=="></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.f29617b7a917cbd474e1982954339811.js" integrity="md5-8pYXt6kXy9R04ZgpVDOYEQ=="></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.b82368b55ab941d0bb7db421e1084d6c.js" integrity="md5-uCNotVq5QdC7fbQh4QhNbA=="></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.780b6c687c0fa94aafcd976fedb0c871.js" integrity="md5-eAtsaHwPqUqvzZdv7bDIcQ=="></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.4a48532bf0b17c058b8b6854f49de23f.js" integrity="md5-SkhTK/CxfAWLi2hU9J3iPw==" defer></script><script type="text/javascript" src="/lib/topbar/topbar.min.d1b243f03e8431338028ab6bccbe9243.js" integrity="md5-0bJD8D6EMTOAKKtrzL6SQw=="></script><script type="text/javascript" src="/lib/pjax/pjax.min.36c19fbf6fa57ad29c7a0a11e5696883.js" integrity="md5-NsGfv2&#43;letKcegoR5Wlogw=="></script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script async defer data-website-id="4a63ddaf-d146-42f4-8145-7d0ef7f7b2a4" src="https://umami.bnblogs.cc/umami.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"waline":{"commentCount":true,"copyright":true,"dark":"body[theme='dark'], body[theme='black']","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji"],"highlight":true,"lang":"zh-cn","login":"enable","meta":["nick","mail","link"],"pageSize":100,"requiredMeta":["nick","mail"],"serverURL":"https://my-waline-one.vercel.app"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"desktop-header-typeit":"Barney's Blog","mobile-header-typeit":"Barney's Blog"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":15,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":0,"speed":100}};</script><script type="text/javascript" src="/lib/waline/Waline.min.74cf6bc1a135ed34617bb482fb215fc5.js" integrity="md5-dM9rwaE17TRhe7SC&#43;yFfxQ==" defer></script><script type="text/javascript" src="/js/waline.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.70122806a31939745c1f3fd5d2e845f2.js" integrity="md5-cBIoBqMZOXRcHz/V0uhF8g=="></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.2493a49c3eb456e424fc22ba22d027a8.js" integrity="md5-JJOknD60VuQk/CK6ItAnqA=="></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.99c66a33f2a42b61f289e7c9b884a899.js" integrity="md5-mcZqM/KkK2HyiefJuISomQ=="></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.46a19c0236eccc86e5cd3b2521f8c69a.js" integrity="md5-RqGcAjbszIblzTslIfjGmg=="></script><script type="text/javascript" src="/lib/sharer/sharer.min.b834cfb885a9d1d9cc75ca8215372179.js" integrity="md5-uDTPuIWp0dnMdcqCFTcheQ=="></script><script type="text/javascript" src="/lib/typeit/typeit.min.9d25659879cc88596096d4ad38a5a303.js" integrity="md5-nSVlmHnMiFlgltStOKWjAw=="></script><script type="text/javascript" src="/js/cookieconsent.min.js" defer></script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.a16e59257986febeb0baaee33f5b0a78.css" integrity="md5-oW5ZJXmG/r6wuq7jP1sKeA=="></div></body>
+
+</html>

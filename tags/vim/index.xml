@@ -5,22 +5,20 @@
         <description>vim - 标签 - Barney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>15270405776@163.com (Barney)</managingEditor>
             <webMaster>15270405776@163.com (Barney)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Aug 2021 10:25:34 &#43;0800</lastBuildDate><atom:link href="https://barneys.gitee.io/tags/vim/" rel="self" type="application/rss+xml" /><item>
+    <title>vim入门</title>
+    <link>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Sat, 31 Jul 2021 22:52:40 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[vim基础操作]]></description>
+</item><item>
     <title>Centos安装nvim</title>
     <link>https://barneys.gitee.io/centos%E5%AE%89%E8%A3%85nvim/</link>
     <pubDate>Sun, 01 Aug 2021 10:25:34 &#43;0800</pubDate><author>
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/centos%E5%AE%89%E8%A3%85nvim/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/Neovim-logo.svg.png" referrerpolicy="no-referrer">
+                <img src="/images/img/Neovim-logo.svg.png" referrerpolicy="no-referrer">
             </div><p>nvim使用教程</p>]]></description>
-</item><item>
-    <title>vim基础操作</title>
-    <link>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</link>
-    <pubDate>Sat, 31 Jul 2021 22:52:40 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master//img/1627743613797-vim-logo.png" referrerpolicy="no-referrer">
-            </div><p>vim基础操作</p>]]></description>
 </item></channel>
 </rss>

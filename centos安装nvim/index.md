@@ -19,7 +19,7 @@ yum install -y neovim python3-neovim
 
 2.使用nvim命令进入
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200208213937.png" caption="nvim初始界面">}}
+{{< image src="/images/img/20200208213937.png" caption="nvim初始界面">}}
 
 3.创建一个`~/.config/nvim`文件夹,再在里面创建`init.vim`文件,这就是`nvim`配置文件
 
@@ -44,7 +44,7 @@ yum remove neovim
 curl -sL install-node.now.sh/lts | bash
 ```
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200208214604.png" caption="安装node.js">}}
+{{< image src="/images/img/20200208214604.png" caption="安装node.js">}}
 
 查看`node.js`版本
 
@@ -213,7 +213,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 `javascript`文件不存在,如图:
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200209234913.png" caption="js不存在">}}
+{{< image src="/images/img/20200209234913.png" caption="js不存在">}}
 
 解决方案:使用下列命令
 

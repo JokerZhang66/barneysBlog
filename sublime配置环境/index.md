@@ -17,13 +17,13 @@
 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
 ```
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200107161642.png" caption="修改注册表">}}
+{{< image src="/images/img/20200107161642.png" caption="修改注册表">}}
 
 点击右键-新建，选择`字符串值`。命名为`autorun` 点击右击修改，数值数据填写`chcp 65001 >$null`，确定即可
 
 ## 配置c/c++环境
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200107162145.png" caption="新建c/c++配置文件">}}
+{{< image src="/images/img/20200107162145.png" caption="新建c/c++配置文件">}}
 
 新建两个配置文件,分别命名为
 
@@ -92,11 +92,11 @@
 
 <span style='color:red'>如果你使用的是win10自带的输入法,请修改编译的快捷键,否则会产生冲突 ! ! !</span>
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20200107162641.png" caption="使用快捷键">}}
+{{< image src="/images/img/20200107162641.png" caption="使用快捷键">}}
 
 **切换编译环境看下图**
 
-{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/image-20200107162615494.png" caption="切换编译环境">}}
+{{< image src="/images/img/image-20200107162615494.png" caption="切换编译环境">}}
 
 
 

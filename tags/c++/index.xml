@@ -25,7 +25,7 @@
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/c-%E5%9F%BA%E7%A1%80/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/1627744686842-cpp.jpg" referrerpolicy="no-referrer">
+                <img src="/images/img/1627744686842-cpp.jpg" referrerpolicy="no-referrer">
             </div><p>c++基础用法</p>]]></description>
 </item><item>
     <title>Stringstream小用法</title>
@@ -34,7 +34,7 @@
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/stringstream%E7%94%A8%E6%B3%95/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/CorPython/images@master//img/1627744686842-cpp.jpg" referrerpolicy="no-referrer">
+                <img src="/images/img/1627744686842-cpp.jpg" referrerpolicy="no-referrer">
             </div>概述要使用stringstream必须包含&lt;sstream&gt;头文件 , 这个头文件包含ostringstream、istringst]]></description>
 </item><item>
     <title>Sublime配置C/C&#43;&#43;环境</title>

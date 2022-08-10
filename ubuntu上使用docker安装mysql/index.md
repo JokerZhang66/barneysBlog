@@ -6,7 +6,7 @@
 docker search mysql
 ```
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220308164142.png" caption="">}}</center>
+<center>{{< image src="/images/img/20220308164142.png" caption="">}}</center>
 
 ### 2.docker仓库拉取mysql8.0镜像
 
@@ -22,7 +22,7 @@ docker pull mysql:8.0
 docker images mysql:8.0
 ```
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220308164232.png" caption="">}}</center>
+<center>{{< image src="/images/img/20220308164232.png" caption="">}}</center>
 
 ### 4.安装运行mysql8.0容器
 
@@ -45,7 +45,7 @@ docker run -p 3307:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0
 docker ps
 ```
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220308165059.png" caption="">}}</center>
+<center>{{< image src="/images/img/20220308165059.png" caption="">}}</center>
 
 ### 6.docker登录mysql
 
@@ -53,16 +53,16 @@ docker ps
 docker exec -it mysql bash
 mysql -uroot -p
 ```
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220308165341.png" caption="">}}</center>
+<center>{{< image src="/images/img/20220308165341.png" caption="">}}</center>
 
 ### 7.使用客户端连接工具(navicat)远程登录mysql
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220308165538.png" caption="">}}</center>
+<center>{{< image src="/images/img/20220308165538.png" caption="">}}</center>
 
 
 会出现下面的`2059`错误
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220308165609.png" caption="">}}</center>
+<center>{{< image src="/images/img/20220308165609.png" caption="">}}</center>
 
 报错：navicat不支持caching_sha_password加密方式
 原因：mysql8.0使用新的密码加密方式：caching_sha_password
@@ -76,12 +76,12 @@ select host,user,plugin from user;
 alter user 'root'@'%' identified with mysql_native_password by 'root';
 ```
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/image-20220308165934553.png" caption="">}}</center>
+<center>{{< image src="/images/img/image-20220308165934553.png" caption="">}}</center>
 
 
 ### 8.重新登录成功
 
-<center>{{< image src="https://cdn.jsdelivr.net/gh/CorPython/images@master/img/20220308170213.png" caption="">}}</center>
+<center>{{< image src="/images/img/20220308170213.png" caption="">}}</center>
 
 ### 9.设置mysql容器开机自启动
 
@@ -91,4 +91,9 @@ alter user 'root'@'%' identified with mysql_native_password by 'root';
 docker update --restart=always mysql 
 ```
 
+### 10.修改mysql原始密码
 
+登入mysql后,修改原始密码为`123456`
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+```
