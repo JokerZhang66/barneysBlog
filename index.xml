@@ -44,13 +44,6 @@
     </author><guid>https://barneys.gitee.io/hugo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/</guid>
     <description><![CDATA[纯属个人主观推荐]]></description>
 </item><item>
-    <title>Test</title>
-    <link>https://barneys.gitee.io/test/</link>
-    <pubDate>Sun, 31 Jul 2022 00:23:48 &#43;0800</pubDate><author>
-        <name>Barney</name>
-    </author><guid>https://barneys.gitee.io/test/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
     <title>Vercel部署本地项目</title>
     <link>https://barneys.gitee.io/vercel%E9%83%A8%E7%BD%B2%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE/</link>
     <pubDate>Sat, 30 Jul 2022 18:56:23 &#43;0800</pubDate><author>
@@ -121,5 +114,12 @@
         <name>Barney</name>
     </author><guid>https://barneys.gitee.io/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD/</guid>
     <description><![CDATA[安装Nginx1 2 sudo apt-get update sudo apt-get install nginx 卸载Nginx1 2 3 4 sudo apt-get remove nginx nginx-common # 卸载删除除了配置文件以外的所有文件。 sudo apt-get purge nginx nginx-common # 卸载所有东东，包括删除配置]]></description>
+</item><item>
+    <title>修复Uptime Kuma一个小错误</title>
+    <link>https://barneys.gitee.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</link>
+    <pubDate>Thu, 17 Mar 2022 19:45:07 &#43;0800</pubDate><author>
+        <name>Barney</name>
+    </author><guid>https://barneys.gitee.io/%E4%BF%AE%E5%A4%8Duptime-kuma%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%94%99%E8%AF%AF/</guid>
+    <description><![CDATA[问题描述 解决方案 在location /中添加下列两行: 1 2 proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &#34;upgrade&#34;;]]></description>
 </item></channel>
 </rss>
