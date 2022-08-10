@@ -5,7 +5,7 @@
 
 本博客网站采用的是[DoIt主题](https://github.com/HEIGE-PCloud/DoIt)，评论系统为`waline`，参考本博客的文章时请注明出处。
 
-本博客部署在`github pages`，使用`腾讯云cdn`进行加速, 推荐访问[主站](https://hugo.bnblogs.cc)(特别是国内用户)
+本博客部署在[`vercel`](https://vercel.com), 推荐访问[主站](https://hugo.bnblogs.cc)(特别是国内用户)
 
 ### 关于博主
 
